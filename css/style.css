@@ -1,0 +1,40 @@
+html, body {
+    margin: 0;
+    background-color:#161b22;
+    color:#c9d1d9;
+    font-family: "arial";
+}
+
+li {
+    list-style: none
+}
+
+h1 {
+    margin: 0;
+    padding: 0
+}
+
+.title, .title-welcome {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.main-container {
+    margin-left: 1%;
+    margin-top: 1%;
+}
+
+a:visited {
+    color: #FFDBE9;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:link {
+    color: cyan;
+    background-color: transparent;
+}
+
+#repos li, #pages li {
+    color: #FFDBE9;
+}
