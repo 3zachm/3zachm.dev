@@ -1,0 +1,121 @@
+@font-face {
+	font-family: 'manrope';
+    src: url('../fonts/manrope/manrope.woff2') format('woff2'),
+        url('../fonts/manrope/manrope.woff') format('woff'),
+        url('../fonts/manrope/manrope.otf')  format('opentype');
+    font-style: normal;
+	font-display: swap;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.bg--image {
+	background-image: url('../img/bg.jpg');
+	filter: blur(0.6rem);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+    width: 100%;
+	transform: scale(1.1)
+}
+
+.main {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.main__p {
+	color: white;
+	font-family: manrope;
+	text-align: center;
+	text-shadow: 2px 2px 6px #000000;
+	margin: 2px
+}
+
+.main--p2 {
+	font-size: 12px;
+	margin-bottom: 15px;
+}
+
+.main__heading  {
+    font-family: manrope;
+	font: regular;
+	text-align: center;
+	color: white;
+	text-shadow: 2px 2px 8px #000000;
+	margin-top: 5px;
+	margin-bottom: 5px
+}
+
+.main__pfp {
+    width: 192px;
+    height: 192px;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+	filter: drop-shadow(2px 2px 30px #111111);
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    border-radius: 2px;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 1.5;
+    user-select: none;
+}
+
+.main__invite {
+	margin-top:10px;
+	margin-bottom: 0px;
+	display: flex;
+  	justify-content: center;
+}
+
+.invite__btn {
+    color: #fff;
+    background-color: #7289DA;
+	box-shadow: 2px 2px 30px #111111;
+	font-family: manrope;
+	text-decoration: none;
+}
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	color: white;
+	text-align: center;
+}
+
+.footer__p {
+	font-family: manrope;
+	font-size: 14px;
+	text-shadow: 2px 2px 6px #000000;
+	
+}
+
+a:visited {
+    color: white;
+}
+
+a:link {
+    color: white;
+}
