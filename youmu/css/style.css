@@ -1,8 +1,8 @@
 @font-face {
 	font-family: 'manrope';
-    src: url('../fonts/manrope/manrope.woff2') format('woff2'),
-        url('../fonts/manrope/manrope.woff') format('woff'),
-        url('../fonts/manrope/manrope.otf')  format('opentype');
+    src: url('../../fonts/manrope/manrope.woff2') format('woff2'),
+        url('../../fonts/manrope/manrope.woff') format('woff'),
+        url('../../fonts/manrope/manrope.otf')  format('opentype');
     font-style: normal;
 	font-display: swap;
 }
@@ -109,7 +109,6 @@ html, body {
 	font-family: manrope;
 	font-size: 14px;
 	text-shadow: 2px 2px 6px #000000;
-	
 }
 
 a:visited {
