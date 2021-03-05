@@ -23,3 +23,8 @@ noContext.addEventListener("contextmenu", e => e.preventDefault());
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
+
+function jerma() {
+    $("div.main-header-center").html('<video autoplay id="jerma"><source src="./video/noise.mp4" type="video/mp4"></video>');
+    $("div.main-header-center").css("height", "600px");
+}

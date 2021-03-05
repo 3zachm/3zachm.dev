@@ -1,8 +1,8 @@
 @font-face {
 	font-family: 'manrope';
     src: url('../fonts/manrope/manrope.woff2') format('woff2'),
-        url('../fonts/manrope/manrope.woff') format('woff'),
-        url('../fonts/manrope/manrope.otf')  format('opentype');
+         url('../fonts/manrope/manrope.woff') format('woff'),
+         url('../fonts/manrope/manrope.otf')  format('opentype');
     font-style: normal;
 	font-display: swap;
 }
@@ -12,6 +12,11 @@ html, body {
     background-color:black;
     color:white;
     font-family: "arial";
+    scroll-behavior: smooth;
+}
+
+p {
+    font-family: manrope;
 }
 
 li {
@@ -28,16 +33,10 @@ h1 {
     margin-top: 20px;
 }
 
-a:visited {
-    color: cyan;
-    background-color: transparent;
+a, a:hover, a:visited, a:active {
+    color: inherit;
     text-decoration: none;
-}
-
-a:link {
-    color: cyan;
-    background-color: transparent;
-}
+   }
 
 .main-header {
     overflow:hidden;
@@ -64,6 +63,15 @@ a:link {
     -webkit-transform: translate(0, -60%);
         -ms-transform: translate(0, -60%);
             transform: translate(0, -60%);
+}
+
+#jerma {
+    position: relative;
+    -webkit-transform: translate(0, 12.5%);
+        -ms-transform: translate(0, 12.5%);
+            transform: translate(0, 12.5%);
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .main-header-heading {
@@ -99,11 +107,90 @@ a:link {
     text-align: center;
     color: #FFF;
     font-family: manrope;
-	font: regular;
+	font-size: 30px;
     padding: 20px 0;
+    padding-top: 40px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     width: 100%;
     clear: both;
+}
+
+.projects {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-column {
+    width: 50%;
+    padding: 20px;
+}
+
+#youmu-left {
+    clear: both;
+    height: 399px;
+    border-radius: 2px;
+    margin: 12vh 0;
+    padding-left: 10%;
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+#youmu-right h1 {
+    font-size: 40px;
+    padding: 10px;
+    text-align: left;
+    padding-left: 0px;
+    padding-right: 10%;
+}
+
+#youmu-right p, a {
+    text-align: left;
+    padding-left: 0px;
+    padding-right: 35%;
+}
+
+#youmu-right a {
+    color:#525252
+}
+
+#youmu-right a:hover {
+    color:rgb(170, 170, 170)
+}
+
+#youmu-img {
+    display: block;
+    margin: auto;
+    margin-right: auto;
+    top: 50%;
+    bottom: 0;
+    border: 5px solid rgb(54 57 63);
+    max-width:100%;
+    max-height:100%;
+}
+
+.github {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top:60px;
+    padding-bottom:60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top:60px;
+    padding-bottom:60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /*"Code" for menu*/
@@ -121,26 +208,32 @@ a:link {
     position: absolute;
     transition: 0.5s ease;
 }
-.main-menu li {
+
+.main-menu li, #a-menu {
     text-align: center;
-    width: 100px;
+    width: 125px;
     float: left;
     transition: 0.5s ease;
     cursor: pointer;
+    z-index: 2;
 }
+
 .main-menu li:hover {
     text-shadow: 0px -2px 0px #292929, 0 0 5px rgba(255,255,255,0.8), 0 -4px 15px rgba(255,255,255,0.5);
 }
+
 .main-menu li:nth-of-type(1):hover ~ .underbar {
     left: 2%;
     width:20%;
     background: #6464c8;
 }
+
 .main-menu li:nth-of-type(2):hover ~ .underbar {
     left: 27%;
     width:20%;
     background: #c86464;
 }
+
 .main-menu li:nth-of-type(3):hover ~ .underbar {
     left: 52%;
     width:20%;
@@ -148,6 +241,7 @@ a:link {
     background: rgba(150,250,250,0.5);
     box-shadow: 0 0 10px #46fafa;
 }
+
 .main-menu li:nth-of-type(4):hover ~ .underbar {
     left: 77%;
     width:20%;

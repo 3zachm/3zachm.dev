@@ -11,10 +11,10 @@
         <canvas id="main-bg"></canvas>
         <div class="main-menu">
             <ul>
-                <li>Youmu</li>
-                <li>GitHub</li>
-                <li>Social</li>
-                <li>Secret?</li>
+                <li><a href="#section-projects" id="a-menu">Projects</a></li>
+                <li><a href="#section-github" id="a-menu">GitHub</a></li>
+                <li><a href="#section-social" id="a-menu">Social</a></li>
+                <li><a href="javascript:jerma()" id="a-menu">Secret?</a></li>
                 <div class="underbar"></div>
               </ul>
         </div>
@@ -23,8 +23,37 @@
         </div>
     </header>
     <section class="section">
-        <div class="section-container">
+        <div class="section-container" id="section-projects">
             <h2 class="section-title">Projects</h2>
+            <div class="projects">
+                <div class="projects-column" id="youmu-left">
+                    <img src="img/youmu2.png" id="youmu-img">
+                </div>
+                <div class="projects-column" id="youmu-right">
+                    <h1><u>youmu</u></h1>
+                    <p>A recursive timer discord bot, pinging on a set interval for as long as you aren't AFK.
+                        Inspired by Anigame but has other case uses c:
+                    </p>
+                    <a href="https://github.com/3zachm/recursive-reminders" id="youmu-source" target="_self"><b>Source Code</b></a></p>
+                    <a href="./youmu/" id="youmu-invite" target="_self"><b>Invite</b></a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="section-container" id="section-github">
+            <h2 class="section-title" id="section-github">GitHub</h2>
+            <div class="github">
+                <p>I'll hand pick repos later... or maybe auto gen idk</p>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="section-container" id="section-social">
+            <h2 class="section-title">Social</h2>
+            <div class="social">
+                <p>Will do later</p>
+            </div>
         </div>
     </section>
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
