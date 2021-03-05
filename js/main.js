@@ -15,6 +15,7 @@ async function onLoad() {
             }
         }
     });
+    AOS.init();
 }
 
 noContext = document.getElementById("main-bg")
