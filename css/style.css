@@ -65,7 +65,7 @@ a, a:hover, a:visited, a:active {
             transform: translate(0, -60%);
 }
 
-#jerma {
+#jerma-video {
     position: relative;
     -webkit-transform: translate(0, 12.5%);
         -ms-transform: translate(0, 12.5%);
@@ -213,39 +213,49 @@ a, a:hover, a:visited, a:active {
     text-align: center;
     width: 125px;
     float: left;
-    transition: 0.5s ease;
+    transition: 0.4s ease;
     cursor: pointer;
     z-index: 2;
 }
 
 .main-menu li:hover {
-    text-shadow: 0px -2px 0px #292929, 0 0 5px rgba(255,255,255,0.8), 0 -4px 15px rgba(255,255,255,0.5);
+    text-shadow: 0px -2px 0px #6d6d6d63, 0 0 5px rgba(184, 184, 184, 0.8), 0 -4px 15px rgba(255,255,255,0.5);
 }
 
 .main-menu li:nth-of-type(1):hover ~ .underbar {
     left: 2%;
     width:20%;
-    background: #6464c8;
+    height: 2px;
+    background: rgba(150, 250, 155, 0.5);
 }
 
 .main-menu li:nth-of-type(2):hover ~ .underbar {
     left: 27%;
     width:20%;
-    background: #c86464;
+    height: 2px;
+    background: rgba(150, 197, 250, 0.5);
 }
 
 .main-menu li:nth-of-type(3):hover ~ .underbar {
     left: 52%;
     width:20%;
-    height: 1px;
-    background: rgba(150,250,250,0.5);
-    box-shadow: 0 0 10px #46fafa;
+    height: 2px;
+    background: rgba(172, 150, 250, 0.5);
 }
 
 .main-menu li:nth-of-type(4):hover ~ .underbar {
     left: 77%;
     width:20%;
-    height: 1px;
+    height: 2px;
     background: rgba(150,250,250,0.5);
-    box-shadow: 0 0 10px #46fafa;
+    animation: rgbthing 1000ms 0ms infinite linear;
 }
+
+@keyframes rgbthing {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    100% {
+      filter: hue-rotate(360deg);
+    }
+  }
