@@ -7,9 +7,51 @@
 	font-display: swap;
 }
 
+@font-face {
+    font-family: Torus;
+    font-weight: 100;
+    src: url("../fonts/Torus/Torus-Thin.otf")
+}
+
+@font-face {
+    font-family: Torus;
+    font-weight: 600;
+    src: url("../fonts/Torus/Torus-SemiBold.otf")
+}
+
+@font-face {
+    font-family: Torus;
+    font-weight: 700;
+    src: url("../fonts/Torus/Torus-SemiBold.otf")
+}
+
+@font-face {
+    font-family: Torus;
+    font-weight: 400;
+    src: url("../fonts/Torus/Torus-Regular.otf")
+}
+
+@font-face {
+    font-family: Torus;
+    font-weight: 300;
+    src: url("../fonts/Torus/Torus-Light.otf")
+}
+
+@font-face {
+    font-family: Torus;
+    font-weight: 900;
+    src: url("../fonts/Torus/Torus-Heavy.otf")
+}
+
+@font-face {
+    font-family: Torus;
+    font-weight: 800;
+    src: url("../fonts/Torus-Bold.otf")
+}
+
 html, body {
     margin: 0;
-    background-color:black;
+    background-color:#0e0e10;
     color:white;
     font-family: "arial";
     scroll-behavior: smooth;
@@ -74,6 +116,7 @@ a, a:hover, a:visited, a:active {
             transform: translate(0, 12.5%);
     max-width: 100%;
     max-height: 100%;
+    box-shadow: 0px 0px 150px rgba(0, 0, 0, 0.39);
 }
 
 .main-header-heading {
@@ -173,13 +216,90 @@ a, a:hover, a:visited, a:active {
 }
 
 .social {
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top:60px;
-    padding-bottom:60px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.social-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+    background-color: #18181b;
+    max-width: 900px;
+    min-width: 900px;
+    max-height: 230px;
+    /*Literally taken from the example wiki but it works well so...*/
+    box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(71, 71, 71),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+#social-center {
+    justify-content: center;
+    text-align: left;
+    margin-top: 19px;
+    padding-left: 75px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-height: 190px;
+    min-height: 190px;
+}
+
+#social-avatar {
+    padding-left: 50px;
+    padding-bottom: 15px;
+}
+
+.social-item {
+    display: flex;
+}
+
+.social-sep {
+    border-left: 1px solid rgb(71, 71, 71);
+    height: 160px;
+    left: 50%;
+    margin-left: 60px;
+}
+
+.social-logo {
+    max-width: 30px;
+    padding-right: 10px;
+}
+
+.social-item {
+    font-family: Torus;
+    font-size:20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    padding-right:100px;
+}
+
+.social-link {
+    text-decoration: none;
+    color: #ffffff;
+    opacity: 1;
+}
+
+.social-link:hover {
+    color:#ffbfbf;
+    animation: rgbthing 1000ms 0ms infinite linear;
+}
+
+#avatar {
+    background-image: url('../img/3zachm.png');
+    width: 140px;
+    height: 140px;
+    background-size: cover;
+    background-position: top center;
+    border-radius: 50%;
 }
 
 /*"Code" for menu*/
