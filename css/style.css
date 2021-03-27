@@ -147,6 +147,16 @@ a, a:hover, a:visited, a:active {
     clear: both;
 }
 
+.projects-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 70vw;
+    margin: auto;
+    margin-top: 20px;
+}
+
 .projects {
     padding-left: 10px;
     padding-right: 10px;
@@ -157,52 +167,42 @@ a, a:hover, a:visited, a:active {
 
 .projects-column {
     width: 50%;
-    padding: 20px;
+    margin: 20px;
 }
 
-#youmu-left {
-    clear: both;
-    height: 399px;
-    border-radius: 2px;
-    margin: 12vh 0;
-    padding-left: 10%;
-    max-height: 100%;
-    max-width: 100%;
-    width: auto;
-    height: auto;
+.column-inner {
+    margin: auto
 }
 
-#youmu-right h1 {
+.projects-column h1 {
     font-size: 40px;
-    padding: 10px;
     text-align: left;
-    padding-left: 0px;
-    padding-right: 10%;
 }
 
-#youmu-right p, a {
-    text-align: left;
-    padding-left: 0px;
-    padding-right: 35%;
-}
-
-#youmu-right a {
+.projects-column a {
     color:#525252
 }
 
-#youmu-right a:hover {
+.projects-column a:hover {
     color:rgb(170, 170, 170)
 }
 
-#youmu-img {
+.projects-img {
     display: block;
-    margin: auto;
-    margin-right: auto;
-    top: 50%;
     bottom: 0;
-    border: 5px solid rgb(54 57 63);
     max-width:100%;
     max-height:100%;
+    margin: auto;
+}
+
+#youmu-img {
+    max-width: 75%;
+    max-height: 75%;
+}
+
+#ranks-img {
+    max-width:70%;
+    max-height:70;
 }
 
 .github {
@@ -327,7 +327,7 @@ a, a:hover, a:visited, a:active {
     color: #ffffff;
 }
 
-main-nenu p:before {
+main-menu p:before {
     content:"\a0";
     display:block;
     align-items: center;

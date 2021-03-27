@@ -29,17 +29,36 @@
     <section class="section">
         <div class="section-container" id="section-projects">
             <h2 class="section-title">Projects</h2>
-            <div data-aos="fade-right" class="projects">
-                <div class="projects-column" id="youmu-left">
-                    <img src="img/youmu2.png" id="youmu-img">
+            <div class="projects-container">
+                <div data-aos="fade-right" class="projects">
+                    <div class="projects-column" id="youmu-left">
+                        <div class="column-inner">
+                            <img src="img/youmu2.png" class="projects-img" id="youmu-img">
+                        </div>
+                    </div>
+                    <div class="projects-column" id="youmu-right">
+                        <div class="column-inner">
+                            <h1><u>youmu</u></h1>
+                            <p>A recursive timer discord bot, pinging on a set interval for as long as you aren't AFK.
+                                Inspired by Anigame but has other case uses c:</p>
+                            <a href="https://github.com/3zachm/recursive-reminders" id="youmu-source" target="_self"><b>Source Code</b></a></p>
+                            <a href="./youmu/" id="youmu-invite" target="_self"><b>Invite</b></a></p>
+                        </div>
+                    </div>
                 </div>
-                <div class="projects-column" id="youmu-right">
-                    <h1><u>youmu</u></h1>
-                    <p>A recursive timer discord bot, pinging on a set interval for as long as you aren't AFK.
-                        Inspired by Anigame but has other case uses c:
-                    </p>
-                    <a href="https://github.com/3zachm/recursive-reminders" id="youmu-source" target="_self"><b>Source Code</b></a></p>
-                    <a href="./youmu/" id="youmu-invite" target="_self"><b>Invite</b></a></p>
+                <div data-aos="fade-left" class="projects">
+                    <div class="projects-column" id="stats-left">
+                        <div class="column-inner">
+                            <img src="img/ranks.png" class="projects-img" id="ranks-img">
+                        </div>
+                    </div>
+                    <div class="projects-column" id="stats-right">
+                        <div class="column-inner">
+                            <h1><u>osu!ranks</u></h1>
+                            <p>Simple tool that displays all API user stats for all 4 gamemodes</p>
+                            <a href="./osuranks/" target="_self"><b>Website</b></a></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
