@@ -1,0 +1,133 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "8544611181bb6c1cfdba8e89bb934a0a",
+    "packages": [
+        {
+            "name": "desarrolla2/cache",
+            "version": "v2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/desarrolla2/Cache.git",
+                "reference": "ebd1f7bfd1be605a9b5fbb0a4b25a948a31fe963"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/desarrolla2/Cache/zipball/ebd1f7bfd1be605a9b5fbb0a4b25a948a31fe963",
+                "reference": "ebd1f7bfd1be605a9b5fbb0a4b25a948a31fe963",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "predis/predis": "~1.0.0"
+            },
+            "suggest": {
+                "predis/predis": "Predis support"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Desarrolla2\\Cache\\": "src/",
+                    "Desarrolla2\\Test\\Cache\\": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel González",
+                    "homepage": "http://desarrolla2.com/"
+                }
+            ],
+            "description": "Provides an cache interface for several adapters Apc, Apcu, File, Mongo, Memcache, Memcached, Mysql, Mongo, Redis is supported. New adapters is comming!",
+            "homepage": "https://github.com/desarrolla2/Cache/",
+            "keywords": [
+                "apc",
+                "apcu",
+                "cache",
+                "file",
+                "memcache",
+                "memcached",
+                "mongo",
+                "mysql",
+                "redis"
+            ],
+            "support": {
+                "issues": "https://github.com/desarrolla2/Cache/issues",
+                "source": "https://github.com/desarrolla2/Cache/tree/master"
+            },
+            "time": "2017-01-18T12:58:33+00:00"
+        },
+        {
+            "name": "sunspikes/php-ratelimiter",
+            "version": "v1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sunspikes/php-ratelimiter.git",
+                "reference": "03e940d801fa06393395bbd469915f0571b86fa0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sunspikes/php-ratelimiter/zipball/03e940d801fa06393395bbd469915f0571b86fa0",
+                "reference": "03e940d801fa06393395bbd469915f0571b86fa0",
+                "shasum": ""
+            },
+            "require": {
+                "desarrolla2/cache": "~2.0",
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "^4.7.6",
+                "scrutinizer/ocular": "^1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Sunspikes\\Ratelimit\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Krishnaprasad MG",
+                    "email": "sunspikes@gmail.com"
+                }
+            ],
+            "description": "A framework agnostic rate limiter for PHP",
+            "keywords": [
+                "Krishnaprasad MG",
+                "php-ratelimiter",
+                "rate limit",
+                "ratelimit",
+                "sunspikes",
+                "throttle",
+                "throttling"
+            ],
+            "support": {
+                "issues": "https://github.com/sunspikes/php-ratelimiter/issues",
+                "source": "https://github.com/sunspikes/php-ratelimiter/tree/master"
+            },
+            "time": "2017-11-08T11:08:44+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
+}

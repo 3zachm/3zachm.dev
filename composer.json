@@ -1,0 +1,8 @@
+{
+    "name": "3zachm/dev",
+    "description": "Personal webpage",
+    "type": "project",
+    "require": {
+        "sunspikes/php-ratelimiter": "^1.2"
+    }
+}
