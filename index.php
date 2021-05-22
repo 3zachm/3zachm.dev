@@ -4,7 +4,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/granim.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css?v=0.0">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope">
 	<link rel="stylesheet" href="http://fonts.cdnfonts.com/css/torus">
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
@@ -28,7 +28,7 @@
             <h1 class="main-header-heading">Hello</h1>
         </div>
     </header>
-    <section class="section">
+    <section class="section" data-aos="fade-left">
         <div class="section-container" id="section-projects">
             <h2 class="section-title">Projects</h2>
             <div class="projects-container">
@@ -40,7 +40,7 @@
                     </div>
                     <div class="projects-column" id="youmu-right">
                         <div class="column-inner">
-                            <h1><u>youmu</u></h1>
+                            <h1>youmu</h1>
                             <p>A recursive timer discord bot, pinging on a set interval for as long as you aren't AFK.
                                 Inspired by Anigame but has other case uses c:</p>
                             <a href="https://github.com/3zachm/recursive-reminders" id="youmu-source" target="_self"><b>Source Code</b></a></p>
@@ -56,9 +56,23 @@
                     </div>
                     <div class="projects-column" id="stats-right">
                         <div class="column-inner">
-                            <h1><u>osu!ranks</u></h1>
+                            <h1>osu!ranks</h1>
                             <p>Simple tool that displays all API user stats for all 4 gamemodes</p>
                             <a href="./osuranks/" target="_self"><b>Website</b></a></p>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-right" class="projects">
+                    <div class="projects-column" id="discord-left">
+                        <div class="column-inner">
+                            <img src="img/discord-preview2.png" class="projects-img" id="discord-img">
+                        </div>
+                    </div>
+                    <div class="projects-column" id="discord-right">
+                        <div class="column-inner">
+                            <h1>discord previewer</h1>
+                            <p>Another small thing that allows you to crop, export, and preview it in most contexts on discord</p>
+                            <a href="./discord/" target="_self"><b>Website</b></a></p>
                         </div>
                     </div>
                 </div>
