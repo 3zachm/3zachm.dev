@@ -63,6 +63,9 @@ async function anny() {
 
     $("div.main-header-center").html('<video autoplay id="anny-video"><source src="./video/yepcock.mp4" type="video/mp4"></video>');
     $("div.main-header-center").css("height", "600px");
+    $("div.main-header-center").css("background", "rgba(0, 0, 0, 0)")
+    $("div.main-header-center").css("margin-top", "0")
+    $("div.main-header-center").css("padding-top", "0")
     anny_vid = document.querySelector('#anny-video');
     $(anny_vid).prop("volume", 0.5);
 
@@ -70,7 +73,7 @@ async function anny() {
 
     async function anny_time(time) {
         if (cleanup) { anny_cleanup(); }
-        if (time > 22.0 && time < 52.0) {
+        if (time > 22.6 && time < 52.0) {
             if (!set_anny_state) {
                 mainGradient.changeState('anny-state');
                 set_anny_state = true;
