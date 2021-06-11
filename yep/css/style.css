@@ -1,0 +1,284 @@
+html, body {
+    margin: 0;
+    background-color:#0e0e10;
+    color:white;
+    font-family: "arial";
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+p {
+    font-family: Manrope;
+}
+
+li {
+    list-style: none
+}
+
+h1 {
+    margin: 0;
+    padding: 0
+}
+
+.title, .title-welcome {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+a, a:hover, a:visited, a:active {
+    color: inherit;
+    text-decoration: none;
+   }
+
+.main-header {
+    overflow:hidden;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    color: #FFF;
+    text-align: center;
+}
+
+#main-bg {
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.main-header-center {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translate(0, -60%);
+        -ms-transform: translate(0, -60%);
+            transform: translate(0, -60%);
+}
+
+#anny-video {
+    position: relative;
+    -webkit-transform: translate(0, 12.5%);
+        -ms-transform: translate(0, 12.5%);
+            transform: translate(0, 12.5%);
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 0px 0px 150px rgba(0, 0, 0, 0.39);
+}
+
+.main-header-heading {
+    color: #FFF;
+    font-family: Manrope;
+    font-size: 50px;
+	font: regular;
+    letter-spacing: 0.05em;
+}
+
+.section {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+}
+
+.section-title {
+    margin: 0 auto;
+    max-width: 50%;
+    text-align: center;
+    color: #FFF;
+    font-family: Manrope;
+	font-size: 30px;
+    padding: 20px 0;
+    padding-top: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    clear: both;
+}
+
+body::-webkit-scrollbar {
+	width: 16px;
+	height: 16px
+}
+
+body::-webkit-scrollbar-track {
+	background-color: #202225;
+}
+
+body::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-track {
+	border: 4px solid transparent;
+	background-clip: padding-box;
+	border-radius: 8px
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: #2f3136;
+	min-height: 40px
+}
+
+body::-webkit-scrollbar-corner {
+	background-color: transparent
+}
+
+/*"Code" for menu*/
+
+.main-menu {
+    display:flex;
+    align-items: center;
+    justify-content: left;
+    font-family: Manrope;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    -webkit-transform: translate(0, 0%);
+        -ms-transform: translate(0, 0%);
+            transform: translate(0, 0%);
+}
+
+.main-menu p {
+    font-family: Manrope;
+    font-size: 23px;
+    text-decoration: none;
+    padding: 20px 0px;
+    margin: 0px 20px;
+    color: #ffffff;
+}
+
+main-menu p:before {
+    content:"\a0";
+    display:block;
+    align-items: center;
+    padding:2px 0;
+    line-height:1px;
+    border-right:1px dashed #031D44;
+}
+
+.main-menu a {
+    font-family: Manrope;
+    font-size: 23px;
+}
+
+.a-menu {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 20px 0px;
+    margin: 0px 20px;
+    display: inline-block;
+    position: relative;
+    opacity: 1;
+}
+
+.a-menu:hover {
+    opacity: 1;
+}
+
+.a-menu::before {
+    transition: 300ms;
+    height: 4px;
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+}
+
+.a-menu::before {
+    width: 100%;
+    bottom: 5px;
+    opacity: 0;
+}
+
+.a-menu:hover::before {
+    bottom: 10px;
+    opacity: 1;
+}
+
+.main-menu-sep {
+    border-left: 1px solid rgb(255, 255, 255);
+    height: 50px;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+}
+
+#anny-menu::before {
+    background: rgb(150, 250, 250);
+    animation: rgbthing 1000ms 0ms infinite linear;
+}
+
+.main-header-center {
+    width: 90%;
+    margin-top:5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.5);
+    padding-top:20px;
+    padding-bottom:20px;
+    margin-left:5vw;
+    margin-right:2vw;
+    border-radius: 15px;
+}
+
+.count-top {
+    font-family: Manrope;
+    font-size:48px;
+    width:75vw;
+    text-align: center;
+    padding-bottom: 5vh;
+}
+
+.count-bottom {
+    font-family: Manrope;
+    font-size:32px;
+    width:75vw;
+    text-align: center;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+.count-box {
+    width: 700px;
+    font-size:24px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.count-box p {
+    font-family: Torus;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.emote-img {
+    width:100px;
+    height:auto;
+    padding-right: 10px;
+}
+
+.counter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    font-size: 64px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.inner-counter {
+    display: flex;
+    flex-direction: row;
+}
+
+@keyframes rgbthing {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    100% {
+      filter: hue-rotate(360deg);
+    }
+  }
