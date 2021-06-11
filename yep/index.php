@@ -8,7 +8,26 @@
 
 <!DOCTYPE html>
 <head>
-    <title>3zachm.dev</title>
+    <title>YEP Counter | 3zachm.dev</title>
+    <!-- Titles -->
+    <meta name="title" content="YEP Counter | 3zachm.dev">
+    <meta property="og:title" content="YEP Counter | 3zachm.dev">
+    <meta property="twitter:title" content="YEP Counter | 3zachm.dev">
+    <meta property="twitter:image" content="https://3zachm.dev/yep/img/YEP.png">
+    <!-- <meta property="og:image" content="'.$META_IMG.'"> -->
+    <meta name="description" content="Counting YEPs since June 11th 2021">
+    <meta property="og:description" content="Counting YEPs since June 11th 2021">
+    <meta property="twitter:description" content="Counting YEPs since June 11th 2021">
+
+    <!-- OpenGraph/Discord -->
+    <meta property="og:url" content="https://3zachm.dev/yep">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#b875d7" data-react-helmet="true" >
+
+    <!-- Twitter -->
+    <meta property="twitter:url" content="https://3zachm.dev/yep">
+    <meta property="twitter:card" content="summary">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/granim.js"></script>
