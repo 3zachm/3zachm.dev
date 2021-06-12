@@ -27,6 +27,14 @@ async function onLoad() {
         }
     });
     AOS.init();
+    setInterval(function(){
+        $.get( "./yep.php", function( data ) {
+            $("#yep-count").text(data);
+        });
+        $.get( "./cock.php", function( data ) {
+            $("#cock-count").text(data);
+        });
+    }, 10000)
 }
 
 noContext = document.getElementById("main-bg")

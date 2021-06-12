@@ -31,7 +31,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/granim.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css?v=6.99">
+    <link rel="stylesheet" type="text/css" href="css/style.css?v=6.90">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope">
 	<link rel="stylesheet" href="http://fonts.cdnfonts.com/css/torus">
     <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
@@ -58,7 +58,7 @@
                         <img src="img/YEP.png" class="emote-img" id="yep-img"><p>YEP</p>
                     </div>
                     <div>
-                        <p><?php echo($yep); ?></p>
+                        <p id="yep-count"><?php echo($yep); ?></p>
                     </div>
                 </div>
                 <div class="counter" id="cock">
@@ -66,7 +66,7 @@
                         <p>🐔 COCK </p>
                     </div>
                     <div>
-                    <p><?php echo($cock); ?></p>
+                    <p id="cock-count"><?php echo($cock); ?></p>
                     </div>
                 </div>
             </div>
@@ -83,5 +83,5 @@
             </div>
         </div>
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-    <script src="js/main.js?v=6.9"></script>
+    <script src="js/main.js?v=6.0"></script>
 </body>
