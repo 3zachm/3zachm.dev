@@ -107,35 +107,3 @@ async function anny() {
         }
     }
 }
-
-function checkWord(word, str) { // https://stackoverflow.com/a/55163531/15278679
-    const allowedSeparator = '\\\s,;"\'|';
-    const regex = new RegExp(
-        `(^.*[${allowedSeparator}]${word}$)|(^${word}[${allowedSeparator}].*)|(^${word}$)|(^.*[${allowedSeparator}]${word}[${allowedSeparator}].*$)`,
-        // Case insensitive
-        'i',
-    );
-    return regex.test(str);
-}
-
-
-const client = new tmi.Client({
-    channels: ['anny']
-});
-
-client.connect().catch(console.error);
-
-client.on('message', (channel, tags, message, self) => {
-    //$('#chat').html('<div>' + channel + ' | ' + (tags.username['display-name'] || tags.username) + ': ' + message + '</div>');
-    if(checkWord('yepcock', message)) {
-        console.log('yepcock');
-        $("#yep-count").text(parseInt($("#yep-count").text()) + 1);
-        $("#cock-count").text(parseInt($("#cock-count").text()) + 1);
-    }
-    else if(checkWord('yep', message)) {
-        $("#yep-count").text(parseInt($("#yep-count").text()) + 1);
-    }
-    else if(checkWord('cock', message)) {
-        $("#cock-count").text(parseInt($("#cock-count").text()) + 1);
-    }
-});

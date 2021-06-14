@@ -30,9 +30,10 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
     <script src="js/granim.js"></script>
     <script src="js/tmi.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css?v=6.9">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope">
 	<link rel="stylesheet" href="http://fonts.cdnfonts.com/css/torus">
     <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
@@ -74,6 +75,8 @@
             <div class="count-bottom">from a total of <?php echo($users); ?> chatters</div>
             <p>Started June 11th 2021 - Live update is an estimate, refresh for accurate count</p>
         </div>
+        <div class="chat-box">
+        </div>
     </header>
     <!--<section class="section">
     <div class="section-container" id="section-chatters">
@@ -86,5 +89,6 @@
         </div>
     </section>-->
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-    <script src="js/main.js?v=6.9"></script>
+    <script src="js/main.js"></script>
+    <script src="js/chat.js"></script>
 </body>
