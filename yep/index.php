@@ -31,7 +31,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/granim.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css?v=6.90">
+    <script src="js/tmi.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css?v=6.9">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope">
 	<link rel="stylesheet" href="http://fonts.cdnfonts.com/css/torus">
     <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
@@ -47,7 +48,7 @@
             <p class="p-menu" id="web-title">3zachm.dev</p>
             <div class="main-menu-sep"></div>
             <a href="/" target="_self" class="a-menu">Home</a>
-            <a href="#section-chatters" class="a-menu">Chatters</a>
+            <!--<a href="#section-chatters" class="a-menu">Chatters</a>-->
             <a href="javascript:anny_init();" class="a-menu" id="anny-menu">Secret?</a>
         </div>
         <div class="main-header-center">
@@ -71,9 +72,10 @@
                 </div>
             </div>
             <div class="count-bottom">from a total of <?php echo($users); ?> chatters</div>
+            <p>Started June 11th 2021 - Live update is an estimate, refresh for accurate count</p>
         </div>
     </header>
-    <section class="section">
+    <!--<section class="section">
     <div class="section-container" id="section-chatters">
             <h2 class="section-title">Chatters</h2>
             <div class="projects-container">
@@ -82,6 +84,7 @@
                 </div>
             </div>
         </div>
+    </section>-->
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-    <script src="js/main.js?v=6.0"></script>
+    <script src="js/main.js?v=6.9"></script>
 </body>

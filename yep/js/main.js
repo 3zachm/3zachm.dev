@@ -27,14 +27,11 @@ async function onLoad() {
         }
     });
     AOS.init();
-    setInterval(function(){
-        $.get( "./yep.php", function( data ) {
-            $("#yep-count").text(data);
+    setInterval(function () {
+        $.get("./users.php", function (data) {
+            $("div.count-bottom").html("from a total of " + data +" chatters");
         });
-        $.get( "./cock.php", function( data ) {
-            $("#cock-count").text(data);
-        });
-    }, 10000)
+    }, 60000 + (Math.random()*10000))
 }
 
 noContext = document.getElementById("main-bg")
@@ -47,8 +44,10 @@ function sleep(ms) {
 var anny_vid = null;
 var cleanup = false;
 var set_anny_state = false;
+var pre_html = '';
 
 async function anny_init() {
+    pre_html = $("div.main-header-center").html()
     await anny();
 }
 
@@ -59,6 +58,12 @@ async function anny_cleanup() {
     $("div.main-header-center").html('<h1 class="main-header-heading">YEP? u/lilPASTA</h1>');
     $("div.main-header-center").css("height", "");
     $("div.main-header-center").fadeIn(500);
+    await sleep(5000);
+    $("div.main-header-center").fadeOut(500);
+    await sleep(500);
+    $("div.main-header-center").fadeIn(500);
+    $("div.main-header-center").html(pre_html);
+    $("div.main-header-center").removeAttr("style")
     return;
 }
 
@@ -77,10 +82,10 @@ async function anny() {
     anny_vid = document.querySelector('#anny-video');
     $(anny_vid).prop("volume", 0.5);
 
-    anny_vid.ontimeupdate = function() {anny_time(anny_vid.currentTime)}
+    anny_vid.ontimeupdate = function () { anny_time(anny_vid.currentTime) }
 
     async function anny_time(time) {
-        if (cleanup) { anny_cleanup(); }
+        if (cleanup) { anny_cleanup(); cleanup = false; anny_vid.ontimeupdate = null;}
         if (time > 22.6 && time < 52.0) {
             if (!set_anny_state) {
                 mainGradient.changeState('anny-state');
@@ -102,3 +107,35 @@ async function anny() {
         }
     }
 }
+
+function checkWord(word, str) { // https://stackoverflow.com/a/55163531/15278679
+    const allowedSeparator = '\\\s,;"\'|';
+    const regex = new RegExp(
+        `(^.*[${allowedSeparator}]${word}$)|(^${word}[${allowedSeparator}].*)|(^${word}$)|(^.*[${allowedSeparator}]${word}[${allowedSeparator}].*$)`,
+        // Case insensitive
+        'i',
+    );
+    return regex.test(str);
+}
+
+
+const client = new tmi.Client({
+    channels: ['anny']
+});
+
+client.connect().catch(console.error);
+
+client.on('message', (channel, tags, message, self) => {
+    //$('#chat').html('<div>' + channel + ' | ' + (tags.username['display-name'] || tags.username) + ': ' + message + '</div>');
+    if(checkWord('yepcock', message)) {
+        console.log('yepcock');
+        $("#yep-count").text(parseInt($("#yep-count").text()) + 1);
+        $("#cock-count").text(parseInt($("#cock-count").text()) + 1);
+    }
+    else if(checkWord('yep', message)) {
+        $("#yep-count").text(parseInt($("#yep-count").text()) + 1);
+    }
+    else if(checkWord('cock', message)) {
+        $("#cock-count").text(parseInt($("#cock-count").text()) + 1);
+    }
+});
