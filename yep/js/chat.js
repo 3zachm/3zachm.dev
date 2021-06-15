@@ -1,14 +1,9 @@
 // MODIFIED VERSION OF https://codepen.io/gylidian/pen/NWWzGGg I BARELY DID ANYTHING, thank you so much for having written this https://github.com/gylidian
+// Fixed (slightly) to support v3 of BTTV
+// https://api.frankerfacez.com/v1/room/ TBI/////////////////////////////////////////////////
 
-/* Helpful information:
-
-Clips
-    Endpoint: https://api.twitch.tv/kraken/clips/ReliableSplendidInternPogChamp?on_site=1&api_version=5
-    Exmpample Clip: https://clips.twitch.tv/ReliableSplendidInternPogChamp
-    Missing thumbnail: https://clips-media-assets.twitch.tv/404-preview-86x45.jpg
-    Broken thumbnail: https://clips-media-assets.twitch.tv/vod-153090723-offset-1928.5-60-preview-1920x1080.jpg
-
-*/
+var chan_id = '56418014'
+var chan_name = 'anny'
 
 const chatEle = $('div.chat-box')
 const twitchBadgeCache = {
@@ -63,7 +58,7 @@ if (testing) {
                     reconnect: true,
                     secure: true
                 },
-                channels: ['anny'],
+                channels: [chan_name],
             });
             addListeners();
             client.connect();
@@ -92,7 +87,6 @@ function addListeners() {
     });
 
     client.on('connected', () => {
-        getBTTVEmotes();
         getBadges()
             .then(badges => twitchBadgeCache.data.global = badges);
         showAdminMessage({
@@ -162,15 +156,15 @@ function addListeners() {
             return;
         }
         let chan = getChan(channel);
-        getBTTVEmotes(chan);
+        getBTTVEmotes(chan_name, chan_id);
         twitchNameToUser(chan)
             .then(user => getBadges(user._id))
             .then(badges => twitchBadgeCache.data[chan] = badges)
         showAdminMessage({
             message: `Joined ${chan}`,
-            timeout: 1000
+            timeout: 5000
         })
-        setTimeout(() => { $( ".chat-line.admin" ).remove(); }, 1000);
+        setTimeout(() => { $( ".chat-line.admin" ).remove(); }, 5000);
     });
 
     client.on('part', (channel, username, self) => {
@@ -269,6 +263,7 @@ function showMessage({ chan, type, message = '', data = {}, timeout = 0, attribs
 
         let nameEle = document.createElement('span');
         nameEle.classList.add('user-name');
+        nameEle.style.cssText = "color:" + data.color;
         nameEle.innerText = data.name;
 
         let colonEle = document.createElement('span');
@@ -454,21 +449,20 @@ function getClip(clipSlug) {
     });
 }
 
-function getBTTVEmotes(channel) {
+function getBTTVEmotes(channel, channel_id) {
     let endpoint = 'emotes';
     let global = true;
     if (channel) {
-        endpoint = 'channels/' + channel;
+        endpoint = 'twitch/' + channel_id;
         global = false;
     }
-    return request({
-        base: 'https://api.betterttv.net/2/',
-        endpoint
-    })
-        .then(({ emotes, status, urlTemplate }) => {
+    fetch('https://api.betterttv.net/3/cached/users/' + endpoint)
+        .then(response => response.json())
+        .then(data => {
+            emotes = data;
             if (status === 404) return;
-            bttvEmoteCache.urlTemplate = urlTemplate;
-            emotes.forEach(n => {
+            //bttvEmoteCache.urlTemplate = urlTemplate;
+            emotes['sharedEmotes'].forEach(n => {
                 n.global = global;
                 n.type = ['bttv', 'emote'];
                 if (!global) {

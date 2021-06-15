@@ -215,6 +215,7 @@ main-menu p:before {
     margin-left:5vw;
     margin-right:5vw;
     border-radius: 15px;
+    min-width: 700px;
 }
 
 .count-top {
