@@ -263,12 +263,12 @@ function showMessage({ chan, type, message = '', data = {}, timeout = 0, attribs
 
         let nameEle = document.createElement('span');
         nameEle.classList.add('user-name');
-        nameEle.style.cssText = "color:" + data.color;
+        nameEle.style.cssText = "font-weight:bold;color:" + data.color;
         nameEle.innerText = data.name;
 
         let colonEle = document.createElement('span');
         colonEle.classList.add('message-colon');
-        colonEle.innerText = ': ';
+        colonEle.innerText = ':‎‎ ';
 
         let messageEle = document.createElement('span');
         messageEle.classList.add('message');

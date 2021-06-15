@@ -33,7 +33,7 @@
     <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
     <script src="js/granim.js"></script>
     <script src="js/tmi.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css?v=6.9">
+    <link rel="stylesheet" type="text/css" href="css/style.css?v=669">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope">
 	<link rel="stylesheet" href="http://fonts.cdnfonts.com/css/torus">
     <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
@@ -90,5 +90,5 @@
     </section>-->
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/chat.js?v=6.9"></script>
+    <script src="js/chat.js?v=669"></script>
 </body>
