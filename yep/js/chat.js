@@ -128,6 +128,10 @@ function addListeners() {
             $("#yep-count").text(parseInt($("#yep-count").text()) + 1);
             $("#cock-count").text(parseInt($("#cock-count").text()) + 1);
         }
+        else if(checkWord('yep', message) && checkWord('cock', message)) {
+            $("#yep-count").text(parseInt($("#yep-count").text()) + 1);
+            $("#cock-count").text(parseInt($("#cock-count").text()) + 1);
+        }
         else if(checkWord('yep', message)) {
             $("#yep-count").text(parseInt($("#yep-count").text()) + 1);
         }
@@ -463,6 +467,19 @@ function getBTTVEmotes(channel, channel_id) {
             if (status === 404) return;
             //bttvEmoteCache.urlTemplate = urlTemplate;
             emotes['sharedEmotes'].forEach(n => {
+                n.global = global;
+                n.type = ['bttv', 'emote'];
+                if (!global) {
+                    if (channel in bttvEmoteCache.data === false) {
+                        bttvEmoteCache.data[channel] = [];
+                    }
+                    bttvEmoteCache.data[channel].push(n);
+                }
+                else {
+                    bttvEmoteCache.data.global.push(n);
+                }
+            });
+            emotes['channelEmotes'].forEach(n => {
                 n.global = global;
                 n.type = ['bttv', 'emote'];
                 if (!global) {
