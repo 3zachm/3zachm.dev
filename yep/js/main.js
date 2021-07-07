@@ -1,32 +1,7 @@
 document.body.onload = function () { onLoad() };
 
-var mainGradient = null;
-
 async function onLoad() {
     $("#main-header").fadeIn(1000);
-    mainGradient = new Granim({
-        element: '#main-bg',
-        direction: 'left-right',
-        isPausedWhenNotInView: true,
-        stateTransitionSpeed: 200,
-        states: {
-            "default-state": {
-                gradients: [
-                    ['#9D50BB', '#6E48AA'],
-                    ['#4776E6', '#8E54E9']
-                ],
-                transitionSpeed: 7000
-            },
-            "anny-state": {
-                gradients: [
-                    ['#9D50BB', '#6E48AA'],
-                    ['#4776E6', '#8E54E9']
-                ],
-                transitionSpeed: 300
-            }
-        }
-    });
-    AOS.init();
     setInterval(function () {
         $.get("./users.php", function (data) {
             $("div.count-bottom").html("from a total of " + data +" chatters");
@@ -34,8 +9,8 @@ async function onLoad() {
     }, 60000 + (Math.random()*10000))
 }
 
-noContext = document.getElementById("main-bg")
-noContext.addEventListener("contextmenu", e => e.preventDefault());
+//noContext = document.getElementById("main-bg")
+//noContext.addEventListener("contextmenu", e => e.preventDefault());
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -79,6 +54,7 @@ async function anny() {
     $("div.main-header-center").css("background", "rgba(0, 0, 0, 0)")
     $("div.main-header-center").css("margin-top", "0")
     $("div.main-header-center").css("padding-top", "0")
+    $("div.main-header-center").css("border", "0px solid #0e0e10")
     anny_vid = document.querySelector('#anny-video');
     $(anny_vid).prop("volume", 0.5);
 
@@ -88,13 +64,11 @@ async function anny() {
         if (cleanup) { anny_cleanup(); cleanup = false; anny_vid.ontimeupdate = null;}
         if (time > 22.6 && time < 52.0) {
             if (!set_anny_state) {
-                mainGradient.changeState('anny-state');
                 set_anny_state = true;
             }
         }
         else if (time > 52.0 && time < 53.0) {
             if (set_anny_state) {
-                mainGradient.changeState('default-state');
                 set_anny_state = false;
             }
         }

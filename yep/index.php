@@ -28,36 +28,30 @@
     <meta property="twitter:url" content="https://3zachm.dev/yep">
     <meta property="twitter:card" content="summary">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
-    <script src="js/granim.js"></script>
-    <script src="js/tmi.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css?v=6.9?">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope">
+    <link rel="stylesheet" type="text/css" href="css/style.css?v=69.420">
+    <link rel="preload" href="https://fonts.cdnfonts.com/s/51361/TorusRegular.734ed3ae.woff" as="font" type="font/woff" crossorigin>
 	<link rel="stylesheet" href="http://fonts.cdnfonts.com/css/torus">
     <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
 	<link rel="manifest" href="../favicon/site.webmanifest">
-    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header class="main-header" id="main-header" style="display: none;">
-        <canvas id="main-bg"></canvas>
+        <!--<canvas id="main-bg" style="background-color:#181818;"></canvas>-->
         <div class="main-menu">
-            <p class="p-menu" id="web-title">3zachm.dev</p>
+            <a href="/" target="_self" class="a-menu">3zachm.dev</a>
             <div class="main-menu-sep"></div>
-            <a href="/" target="_self" class="a-menu">Home</a>
+            <!--<a href="/" target="_self" class="a-menu">Home</a>-->
             <!--<a href="#section-chatters" class="a-menu">Chatters</a>-->
             <a href="javascript:anny_init();" class="a-menu" id="anny-menu">Secret?</a>
         </div>
         <div class="main-header-center">
-            <div class="count-top"><u><a href="https://twitch.tv/anny">twitch.tv/anny</a></u></div>
+            <div class="count-top"><a href="https://twitch.tv/anny">twitch.tv/anny</a></div>
             <div class="count-box">
                 <div class="counter" id="yep">
                     <div class="inner-counter">
-                        <img src="img/YEP.png" class="emote-img" id="yep-img"><p>YEP</p>
+                        <img src="img/YEP.webp" class="emote-img" id="yep-img" width="100px" height="98px"><p>YEP</p>
                     </div>
                     <div>
                         <p id="yep-count"><?php echo($yep); ?></p>
@@ -88,7 +82,9 @@
             </div>
         </div>
     </section>-->
-    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/chat.js?v=6.9?"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <script src="js/tmi.min.js"></script>
+    <script src="js/main.js?v=69.420"></script>
+    <script src="js/chat.js?v=69.420"></script>
 </body>
