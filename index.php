@@ -5,19 +5,21 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/granim.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css?v=0.0">
+    <link rel="preload" href="https://fonts.gstatic.com/s/manrope/v4/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FN_C-bnTe87A.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.cdnfonts.com/s/51361/TorusRegular.734ed3ae.woff" as="font" type="font/woff" crossorigin>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope">
 	<link rel="stylesheet" href="http://fonts.cdnfonts.com/css/torus">
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
 	<link rel="manifest" href="./favicon/site.webmanifest">
-    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header class="main-header" id="main-header" style="display: none;">
         <canvas id="main-bg"></canvas>
         <div class="main-menu">
-            <p class="p-menu" id="web-title">3zachm.dev</p>
+            <a href="/" target="_self" class="a-menu">3zachm.dev</a>
             <div class="main-menu-sep"></div>
             <a href="#section-projects" class="a-menu">Projects</a>
             <a href="#section-social" class="a-menu">Social</a>
