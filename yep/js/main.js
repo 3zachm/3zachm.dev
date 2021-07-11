@@ -1,20 +1,25 @@
 document.body.onload = function () { onLoad() };
 
-async function onLoad() {
-    $("#main-header").fadeIn(1000);
-    setInterval(function () {
-        $.get("./users.php", function (data) {
-            $("div.count-bottom").html("from a total of " + data +" chatters");
-        });
-    }, 60000 + (Math.random()*10000))
-}
+let userInterval;
 
-//noContext = document.getElementById("main-bg")
-//noContext.addEventListener("contextmenu", e => e.preventDefault());
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
+
+async function onLoad() {
+    $("#main-header").fadeIn(1000);
+    userInterval = setInterval(function () {
+        if (document.hasFocus()) {
+            $.get("./users.php", function (data) {
+                $("div.count-bottom").html("from a total of " + data +" chatters");
+            });
+        }
+    }, 45000 + (Math.random()*1000))
+}
+
+//noContext = document.getElementById("main-bg")
+//noContext.addEventListener("contextmenu", e => e.preventDefault());
 
 var anny_vid = null;
 var cleanup = false;

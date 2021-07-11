@@ -28,8 +28,9 @@
     <meta property="twitter:url" content="https://3zachm.dev/yep">
     <meta property="twitter:card" content="summary">
 
-    <link rel="stylesheet" type="text/css" href="css/style.css?v=69.420">
+    <link rel="stylesheet" type="text/css" href="css/style.css?v=69420?">
     <link rel="preload" href="https://fonts.cdnfonts.com/s/51361/TorusRegular.734ed3ae.woff" as="font" type="font/woff" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope">
 	<link rel="stylesheet" href="http://fonts.cdnfonts.com/css/torus">
     <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
@@ -82,9 +83,9 @@
             </div>
         </div>
     </section>-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
+    <script src="https://twemoji.maxcdn.com/v/13.1.0/twemoji.min.js" integrity="sha384-gPMUf7aEYa6qc3MgqTrigJqf4gzeO6v11iPCKv+AP2S4iWRWCoWyiR+Z7rWHM/hU" crossorigin="anonymous"></script>
     <script src="js/tmi.min.js"></script>
-    <script src="js/main.js?v=69.420"></script>
-    <script src="js/chat.js?v=69.420"></script>
+    <script src="js/main.js?v=69420?"></script>
+    <script src="js/chat.js?v=69420?"></script>
 </body>

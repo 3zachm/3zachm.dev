@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <title>Discord Crop Previewer | 3zachm.dev</title>
     <link rel="stylesheet" type="text/css" href="css/style.css?v=5">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/cropperjs/dist/cropper.css" rel="stylesheet" type="text/css">
-    <script src="https://unpkg.com/cropperjs"></script>
+    <script src="https://unpkg.com/cropperjs" integrity="sha384-kbvjDm1Ra/JEuPb3eiXyo/o5M0OTFxIONPHzkujQEDGdxqVjrX3ViDMtAFRMqWBh" crossorigin="anonymous"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">

@@ -197,6 +197,15 @@ main-menu p:before {
     animation: rgbthing 1000ms 0ms infinite linear;
 }
 
+@keyframes rgbthing {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    100% {
+      filter: hue-rotate(360deg);
+    }
+  }
+
 .main-header-center {
     position: relative;
     top: 50%;
@@ -269,14 +278,7 @@ main-menu p:before {
     flex-direction: row;
 }
 
-@keyframes rgbthing {
-    0% {
-      filter: hue-rotate(0deg);
-    }
-    100% {
-      filter: hue-rotate(360deg);
-    }
-  }
+/*Chat*/
 
 .chat-box {
     position: absolute;
