@@ -257,6 +257,10 @@ main-menu p:before {
     margin-bottom: 10px;
 }
 
+#yep-count, #cock-count {
+    font-family: 'Fira Mono';
+}
+
 .emote-img {
     width:100px;
     height:98px;

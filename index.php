@@ -4,7 +4,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
     <script src="js/granim.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css?yep?">
+    <link rel="stylesheet" type="text/css" href="css/style.css?rain">
     <link rel="preload" href="https://fonts.cdnfonts.com/s/51361/TorusRegular.734ed3ae.woff" as="font" type="font/woff" crossorigin>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope">
 	<link rel="stylesheet" href="http://fonts.cdnfonts.com/css/torus">
@@ -129,5 +129,5 @@
             </div>
         </div>
     </section>
-    <script src="js/main.js?yep?"></script>
+    <script src="js/main.js?rainwww"></script>
 </body>

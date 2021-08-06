@@ -48,8 +48,10 @@ async function boots_cleanup() {
     await sleep(1000);
     boots_vid = null;
     cleanup = false;
-    $('#four').html("inabakumori - Rainy Boots");
+    $("div.main-header-center").html('<h1 class="main-header-heading" id="four">inabakumori - Rainy Boots</h1>')
     $('div.video').fadeIn(400);
+    $('div.video').html("");
+    $("div.main-header-center").fadeIn(400);
     return;
 }
 
@@ -121,8 +123,7 @@ async function boots() {
     video.ontimeupdate = function () { boots_time(video.currentTime) }
 
     async function boots_time(time) {
-        console.log(time)
-        if (cleanup) { boots_cleanup(); cleanup = false; video.ontimeupdate = null; }
+        if (cleanup) { await boots_cleanup(); cleanup = false; video.ontimeupdate = null; return;}
         if (time > 116.5 && time < 117.5) {
             if (!set_boots_state) {
                 console.log("yep")
@@ -133,7 +134,7 @@ async function boots() {
         else if (time > 123.5 && time < 124.5) {
             document.body.appendChild(a_sheet);
         }
-        else if (parseInt(time) == 191) {
+        else if (time > 190) {
             $("div.main-header-center").fadeOut(400);
             $('div.video').fadeOut(400);
             document.body.removeChild(a_sheet);

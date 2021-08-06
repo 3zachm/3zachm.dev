@@ -19,9 +19,9 @@ Header set Strict-Transport-Security "max-age=2592000; includeSubDomains"
 
 # errors
 
-ErrorDocument 400 https://3zachm.dev/error/?n=400
-ErrorDocument 403 https://3zachm.dev/error/?n=403
-ErrorDocument 404 https://3zachm.dev/error/?n=404
-ErrorDocument 414 https://3zachm.dev/error/?n=414
-ErrorDocument 500 https://3zachm.dev/error/?n=500
-ErrorDocument 504 https://3zachm.dev/error/?n=504
+ErrorDocument 400 https://3zachm.dev/error?n=400
+ErrorDocument 403 https://3zachm.dev/error?n=403
+ErrorDocument 404 https://3zachm.dev/error?n=404
+ErrorDocument 414 https://3zachm.dev/error?n=414
+ErrorDocument 500 https://3zachm.dev/error?n=500
+ErrorDocument 504 https://3zachm.dev/error?n=504
