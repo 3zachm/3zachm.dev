@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /misc/
+Disallow: /osuranks/includes/
+Disallow: /yep/includes/
+Disallow: /files/
