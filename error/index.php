@@ -8,7 +8,7 @@
 ?>
 <!DOCTYPE html>
 <head>
-    <title>404 | 3zachm.dev</title>
+    <title><?php echo($error) ?> | 3zachm.dev</title>
     <!-- Titles -->
     <meta name="title" content="<?php echo($error) ?> | 3zachm.dev">
     <meta property="og:title" content="<?php echo($error) ?> | 3zachm.dev">

@@ -1,6 +1,7 @@
 # don't serve .git
 
 RedirectMatch 404 /\.git
+RedirectMatch 404 \.py$
 
 # redirect to https if cloudflare bypassed
 
