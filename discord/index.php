@@ -639,6 +639,7 @@
                                                                         <h2 class="header-23xsNx"><span class="headerText-3Uvj1Y"><span class="username-1A8OIy clickable-1bVtEA" aria-controls="popout_29" aria-expanded="false" role="button" tabindex="0">3zachm</span></span><span class="timestamp-3ZCmNB timestampInline-yHQ6fX"><time aria-label="Today at 5:05 AM" datetime="2021-05-20T12:05:33.954Z"><i class="separator-2nZzUB" aria-hidden="true"> — </i>Today at 5:05 AM</time></span></h2>
                                                                         <div class="markup-2BOw-j messageContent-2qWWxC">Click the upload file button just like you would on normal discord!
                                                                             <div><img src="assets/48.png" id="sample_image" style="padding-top:8px; max-height:60vh;"></div>
+                                                                            <div id="element-scroll"></div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="container-1ov-mD"></div>
@@ -876,10 +877,14 @@
         delete link;
     }
 
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
     $(document).ready(function() {
         var image = document.getElementById('sample_image');
 
-        $('#actual-button').change(function(event) {
+        $('#actual-button').change(async function(event) {
             var files = event.target.files;
             var done = function(url) {
                 image.src = url;
@@ -906,6 +911,8 @@
                 reader.readAsDataURL(files[0]);
                 type = files[0].type
             }
+            await sleep(400)
+            $('#element-scroll')[0].scrollIntoView();
         });
 
         image.addEventListener('cropend', function(e) {
