@@ -1,10 +1,32 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <title>3zachm.dev</title>
+    <!-- Titles -->
+    <meta name="title" content="3zachm.dev">
+    <meta property="og:title" content="3zachm.dev">
+    <meta property="twitter:title" content="3zachm.dev">
+    <meta property="twitter:image" content="https://3zachm.dev/img/3zachm.png">
+    <!-- <meta property="og:image" content="'.$META_IMG.'"> -->
+    <meta name="description" content="Hello">
+    <meta property="og:description" content="Hello">
+    <meta property="twitter:description" content="Hello">
+
+    <!-- OpenGraph/Discord -->
+    <meta property="og:url" content="https://3zachm.dev/">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#b875d7" data-react-helmet="true" >
+
+    <!-- Twitter -->
+    <meta property="twitter:url" content="https://3zachm.dev/">
+    <meta property="twitter:card" content="summary">
+
+    <meta name="viewport" user-scalable="yes">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
     <script src="js/granim.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css?rain">
+    <link rel="stylesheet" type="text/css" href="css/style.css?rain?">
     <link rel="preload" href="https://fonts.cdnfonts.com/s/51361/TorusRegular.734ed3ae.woff" as="font" type="font/woff" crossorigin>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope">
 	<link rel="stylesheet" href="http://fonts.cdnfonts.com/css/torus">
@@ -38,7 +60,7 @@
                 <div data-aos="fade-right" class="projects">
                     <div class="projects-column" id="youmu-left">
                         <div class="column-inner">
-                            <img src="img/youmu2.png" class="projects-img" id="youmu-img">
+                            <img src="img/youmu2.webp" class="projects-img" alt="youmu example" id="youmu-img">
                         </div>
                     </div>
                     <div class="projects-column" id="youmu-right">
@@ -54,7 +76,7 @@
                 <div data-aos="fade-left" class="projects">
                     <div class="projects-column" id="stats-left">
                         <div class="column-inner">
-                            <img src="img/ranks.png" class="projects-img" id="ranks-img">
+                            <img src="img/ranks.webp" class="projects-img" alt="osu!raks example" id="ranks-img">
                         </div>
                     </div>
                     <div class="projects-column" id="stats-right">
@@ -68,7 +90,7 @@
                 <div data-aos="fade-right" class="projects">
                     <div class="projects-column" id="discord-left">
                         <div class="column-inner">
-                            <img src="img/discord-preview2.png" class="projects-img" id="discord-img">
+                            <img src="img/discord-preview2.webp" class="projects-img" alt="discord pfp crop example" id="discord-img">
                         </div>
                     </div>
                     <div class="projects-column" id="discord-right">
@@ -93,27 +115,27 @@
                     <div class="social-sep"></div>
                     <div id="social-center">
                         <div class="social-item" id="social-twitter">
-                            <img class="social-logo" id="logo-twitter" src="./img/icons/twitter.png">
+                            <img class="social-logo" id="logo-twitter" alt="Twitter" src="./img/icons/twitter.png">
                             <a href="https://twitter.com/3zachm/" class="social-link">@3zachm</a>
                         </div>
                         <div class="social-item" id="social-youtube">
-                            <img class="social-logo" id="logo-youtube" src="./img/icons/youtube.png">
+                            <img class="social-logo" id="logo-youtube" alt="YouTube" src="./img/icons/youtube.png">
                             <a href="http://youtube.com/c/3zachm/" class="social-link">c/3zachm</a>
                         </div>
                         <div class="social-item" id="social-twitch">
-                            <img class="social-logo" id="logo-twitch" src="./img/icons/twitch.png">
+                            <img class="social-logo" id="logo-twitch" alt="Twitch" src="./img/icons/twitch.png">
                             <a href="https://www.twitch.tv/3zachm/" class="social-link">3zachm</a>
                         </div>
                         <div class="social-item" id="social-discord">
-                            <img class="social-logo" id="logo-discord" src="./img/icons/discord.png">
-                            <a  class="social-link">3zachm#9999</a>
+                            <img class="social-logo" id="logo-discord" alt="Discord" src="./img/icons/discord.png">
+                            <a href="https://3zachm.dev/" onclick="copySocial(this)" class="social-link">3zachm#9999</a>
                         </div>
                         <div class="social-item" id="social-osu">
-                            <img class="social-logo" id="logo-osu" src="./img/icons/osu.png">
+                            <img class="social-logo" id="logo-osu" alt="osu!" src="./img/icons/osu.png">
                             <a href="https://osu.ppy.sh/users/8630110" class="social-link">u/3zachm</a>
                         </div>
                         <div class="social-item" id="social-steam">
-                            <img class="social-logo" id="logo-steam" src="./img/icons/steam.png">
+                            <img class="social-logo" id="logo-steam" alt="Steam" src="./img/icons/steam.png">
                             <a href="https://steamcommunity.com/id/3zachm/" class="social-link">id/3zachm</a>
                         </div>
                     </div>
@@ -130,4 +152,15 @@
         </div>
     </section>
     <script src="js/main.js?rainwww"></script>
+    <script>
+        function copySocial(social) {
+            event.preventDefault()
+            navigator.clipboard.writeText(social.innerHTML).then(() => {
+                return true;
+            }, () => {
+                return false;
+            });
+        }
+    </script>
 </body>
+</html>
