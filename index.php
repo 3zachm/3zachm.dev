@@ -6,7 +6,7 @@
     <meta name="title" content="3zachm.dev">
     <meta property="og:title" content="3zachm.dev">
     <meta property="twitter:title" content="3zachm.dev">
-    <meta property="twitter:image" content="https://3zachm.dev/img/3zachm.png">
+    <meta property="twitter:image" content="https://3zachm.dev/img/old/3zachm.png">
     <!-- <meta property="og:image" content="'.$META_IMG.'"> -->
     <meta name="description" content="Hello">
     <meta property="og:description" content="Hello">
