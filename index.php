@@ -57,7 +57,23 @@
         <div class="section-container" id="section-projects">
             <h2 class="section-title">Projects</h2>
             <div class="projects-container">
-                <div data-aos="fade-right" class="projects">
+            <div data-aos="fade-right" class="projects">
+                    <div class="projects-column" id="asayake-left">
+                        <div class="column-inner">
+                            <img src="img/asayake2.webp" class="projects-img" alt="asayake example" id="asayake-img">
+                        </div>
+                    </div>
+                    <div class="projects-column" id="asayake-right">
+                        <div class="column-inner">
+                            <h1>asayake</h1>
+                            <p>User-role color bot inspired by Hex (which has gone offline).
+                            Wrriten in node.js, meant for smaller servers as it's role based.</p>
+                            <a href="https://github.com/3zachm/colors-js" id="asayake-source" target="_self"><b>Source Code</b></a></p>
+                            <a href="./asayake/" id="asayake-invite" target="_self"><b>Invite</b></a></p>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left" class="projects">
                     <div class="projects-column" id="youmu-left">
                         <div class="column-inner">
                             <img src="img/youmu2.webp" class="projects-img" alt="youmu example" id="youmu-img">
@@ -73,7 +89,7 @@
                         </div>
                     </div>
                 </div>
-                <div data-aos="fade-left" class="projects">
+                <div data-aos="fade-right" class="projects">
                     <div class="projects-column" id="stats-left">
                         <div class="column-inner">
                             <img src="img/ranks.webp" class="projects-img" alt="osu!raks example" id="ranks-img">
@@ -87,7 +103,7 @@
                         </div>
                     </div>
                 </div>
-                <div data-aos="fade-right" class="projects">
+                <div data-aos="fade-left" class="projects">
                     <div class="projects-column" id="discord-left">
                         <div class="column-inner">
                             <img src="img/discord-preview2.webp" class="projects-img" alt="discord pfp crop example" id="discord-img">
