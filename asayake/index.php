@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>3zachm.dev</title>
+    <title>Asayake Bot | 3zachm.dev</title>
     <!-- Titles -->
     <meta name="title" content="Asayake Bot | 3zachm.dev">
     <meta property="og:title" content="Asayake Bot | 3zachm.dev">
