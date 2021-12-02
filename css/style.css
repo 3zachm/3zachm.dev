@@ -41,17 +41,26 @@ a, a:hover, a:visited, a:active {
 }
 
 #main-bg {
-    position: relative;
+    position: absolute;
     left: 0;
     top: 0;
     z-index: 0;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     image-rendering: optimizeSpeed;             /* Older versions of FF          */
     image-rendering: -moz-crisp-edges;          /* FF 6.0+                       */
     image-rendering: -webkit-optimize-contrast; /* Safari                        */
     image-rendering: -o-crisp-edges;            /* OS X & Windows Opera (12.02+) */
     image-rendering: pixelated;                 /* Awesome future-browsers       */
     -ms-interpolation-mode: nearest-neighbor;   /* IE                            */
+}
+
+#main-gradient {
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100vh;
 }
 
 .main-header-center {
@@ -399,7 +408,7 @@ main-menu p:before {
     top: 0;
 }
 
-#jerma-menu::before {
+#jerma-menu::before, #patchy-menu::before {
     background: rgb(150, 250, 250);
     animation: rgbthing 1000ms 0ms infinite linear;
 }

@@ -1,5 +1,7 @@
 document.body.onload = function () { onLoad() };
 
+var mainGradient = null;
+
 noContext = document.getElementById("main-bg")
 noContext.addEventListener("contextmenu", e => e.preventDefault());
 
@@ -147,6 +149,36 @@ let PATCHYSHEET = './img/26550t.png';
 
 const Animations1 = {
     Idle: [
+        new Animation([
+            new Frame(10,  109, 0, -1, 54, 101),
+            new Frame(70,  110, 0,  0, 54, 100),
+            new Frame(130, 110, 0,  0, 53, 100),
+            new Frame(189, 111, 0,  0, 53, 99),
+            new Frame(248, 110, 1, -1, 51, 100),
+            new Frame(305, 110, 1, -2, 50, 100),
+            new Frame(361, 109, 1, -2, 49, 101),
+            new Frame(416, 109, 0, -2, 50, 101),
+            new Frame(472, 108, 0, -3, 51, 102),
+            new Frame(529, 108, 0, -2, 52, 102),
+            new Frame(587, 108, 0, -2, 53, 102),
+            new Frame(646, 109, 0, -1, 54, 101),
+        ], 2, true),
+        new Animation([
+            new Frame(1354,109, 0, -1, 54, 101),
+            new Frame(1294,110, 0,  0, 54, 100),
+            new Frame(1235,110, 1,  0, 53, 100),
+            new Frame(1176,111, 1,  0, 53, 99),
+            new Frame(1119,110, 2, -1, 51, 100),
+            new Frame(1063,110, 3, -2, 50, 100),
+            new Frame(1008,109, 4, -2, 49, 101),
+            new Frame(952, 109, 4, -2, 50, 101),
+            new Frame(895, 108, 3, -3, 51, 102),
+            new Frame(837, 108, 2, -2, 52, 102),
+            new Frame(778, 108, 1, -2, 53, 102),
+            new Frame(719, 109, 1, -1, 54, 101),
+        ], 2, true)
+    ],
+    Floating: [
         new Animation([
             new Frame(10,  109, 0, -1, 54, 101),
             new Frame(70,  110, 0,  0, 54, 100),
@@ -324,7 +356,10 @@ class Patchouli {
     }
 
     evalAction() {
-        if (this.animation == this.animations.Idle) {
+        if (this.ypos != this.ygoal && this.animation != this.animations.Floating && this.pause == false) {
+            this.setFloat();
+        }
+        else if (this.animation == this.animations.Idle) {
             this.idleTime++;
         }
         else if (this.animation == this.animations.Walking) {
@@ -364,6 +399,23 @@ class Patchouli {
                 this.pause = true;
             }
         }
+        else if (this.animation == this.animations.Floating){
+            if (this.ypos != this.ygoal) {
+                this.floatTo(this.ygoal);
+            }
+            else {
+                let r = Math.random();
+                if (r < 0.1) {
+                    this.setSit();
+                }
+                else if (r < 0.8) {
+                    this.setIdle();
+                }
+                else {
+                    this.setFall();
+                }
+            }
+        }
 
         // if  animation ends and waitTime expires, choose new animation
         if (this.idleTime >= this.waitTime && this.animationFrame == this.getAnimation().frames.length - 1) {
@@ -376,6 +428,15 @@ class Patchouli {
     waitIdle() {
         this.waitTime = Math.floor(Math.random() * (150 - 40 + 1)) + 40;
         this.setIdle();
+    }
+
+    floatTo(y) {
+        if (this.ypos < y) {
+            this.ypos++;
+        }
+        else if (this.ypos > y) {
+            this.ypos--;
+        }
     }
 
     walkTo(x, y) {
@@ -440,6 +501,11 @@ class Patchouli {
         this.waitTime = Math.floor(Math.random() * (300 - 40 + 1)) + 40;
         this.animationFrame = 0;
         this.animation = this.animations.Sitting;
+    }
+    
+    setFloat() {
+        this.animation = this.animations.Floating;
+        this.animationFrame = 0;
     }
 
     setWalk() {
@@ -511,7 +577,7 @@ function step() {
         ctx.canvas.height = window.innerHeight;
 
         chars.forEach(element => {
-            element.posY = canvas.height - 50;
+            element.ygoal = canvas.height - 100;
             element.step();
             const [posX, posY] = element.getDrawPosition();
             let frame = element.getCurrentFrame();
@@ -527,6 +593,7 @@ function step() {
 let frameCount = 0;
 let fps = 30;
 let fpsInterval, startTime, now, then, elapsed;
+let patchySheet = null;
 
 const loadImage = src =>
   new Promise((resolve, reject) => {
@@ -539,17 +606,49 @@ const loadImage = src =>
 
 async function onLoad() {
     $("#main-header").fadeIn(1000);
+
+    mainGradient = new Granim({
+        element: '#main-gradient',
+        direction: 'left-right',
+        isPausedWhenNotInView: true,
+        stateTransitionSpeed: 200,
+        states: {
+            "default-state": {
+                gradients: [
+                    ['#9D50BB', '#6E48AA'],
+                    ['#4776E6', '#8E54E9']
+                ],
+                transitionSpeed: 7000
+            },
+            "jerma-state": {
+                gradients: [
+                    ['#9D50BB', '#6E48AA'],
+                    ['#4776E6', '#8E54E9']
+                ],
+                transitionSpeed: 300
+            }
+        }
+    });
+
     AOS.init();
-    let patchySheet = await loadImage(PATCHYSHEET);
+    patchySheet = await loadImage(PATCHYSHEET);
     chars = [
-        new Patchouli(patchySheet, 100, canvas.height - 110, Animations1.GettingUp, 0, Animations1, Direction.Left, canvas),
-        new Patchouli(patchySheet, canvas.width - 200, canvas.height - 110, Animations1.GettingUp, 0, Animations1, Direction.Right, canvas),
-        new Patchouli(patchySheet, canvas.width - 600, canvas.height - 110, Animations1.GettingUp, 0, Animations1, Direction.Right, canvas),
-        new Patchouli(patchySheet, canvas.width - 1000, canvas.height - 110, Animations1.GettingUp, 0, Animations1, Direction.Right, canvas),
+        //new Patchouli(patchySheet, 100, canvas.height - 110, Animations1.GettingUp, 0, Animations1, Direction.Left, canvas),
+        //new Patchouli(patchySheet, canvas.width - 200, canvas.height - 110, Animations1.Falling, 0, Animations1, Direction.Right, canvas),
+        new Patchouli(patchySheet, canvas.width - 600, canvas.height - 100, Animations1.GettingUp, 0, Animations1, Direction.Right, canvas),
+        new Patchouli(patchySheet, canvas.width - 1000, canvas.height - 100, Animations1.Falling, 0, Animations1, Direction.Right, canvas),
     ];
 
     fpsInterval = 1000 / fps;
     then = window.performance.now();
     startTime = then;
     window.requestAnimationFrame(step);
+}
+
+function spawn_patchy() {
+    let x = Math.floor(Math.random() * (canvas.width - 100 + 1)) + 100;
+    let y = Math.floor(Math.random() * (canvas.height - 100 + 1)) - 300;
+    let direction = Math.random() < 0.5 ? Direction.Left : Direction.Right;
+    let char = new Patchouli(patchySheet, x, y, Animations1.Idle, 0, Animations1, direction, canvas)
+    chars.push(char);
 }
