@@ -316,6 +316,14 @@ const Animations1 = {
             new Frame(591, 735,  0,  6, 47, 94),
         ], 2, false)
     ],
+    Dragged: [
+        new Animation([
+            new Frame(19,  517, 0, 0, 92, 88),
+        ], 2, true),
+        new Animation([
+            new Frame(1075,618, 0,  0,  92, 88),
+        ], 2, true)
+    ],
 }
 
 class Patchouli {
@@ -334,9 +342,14 @@ class Patchouli {
         this.facing = facing;
         this.waitTime = Math.floor(Math.random() * (300 - 40 + 1)) + 40;;
         this.pause = false;
+        this.dragged = false;
     }
 
     step() {
+        if (this.dragged) {
+            this.animation = this.animations.Dragged;
+            return;
+        }
         this.evalAction();
         this.frameTime++;
         if (this.frameTime > this.getAnimation().speed) {
@@ -594,6 +607,7 @@ let frameCount = 0;
 let fps = 30;
 let fpsInterval, startTime, now, then, elapsed;
 let patchySheet = null;
+let selectedPatchy = null;
 
 const loadImage = src =>
   new Promise((resolve, reject) => {
@@ -651,4 +665,44 @@ function spawn_patchy() {
     let direction = Math.random() < 0.5 ? Direction.Left : Direction.Right;
     let char = new Patchouli(patchySheet, x, y, Animations1.Idle, 0, Animations1, direction, canvas)
     chars.push(char);
+}
+
+canvas.addEventListener("mousedown",mousedown);
+canvas.addEventListener("mouseup",mouseup);
+canvas.addEventListener("mousemove",mousemove);
+
+function mousedown(e) {
+    selectedPatchy = getSelectedPatchy(e);
+    if (selectedPatchy != null) {
+        selectedPatchy.offset={
+            x: e.x - selectedPatchy.xpos,
+            y: e.y - selectedPatchy.ypos
+        }
+    }
+}
+
+function mousemove(e) {
+    if (selectedPatchy != null) {
+        selectedPatchy.xpos = e.x - selectedPatchy.offset.x;
+        selectedPatchy.ypos = e.y - selectedPatchy.offset.y;
+    }
+}
+
+function mouseup(e) {
+    selectedPatchy.dragged = false;
+    selectedPatchy.animation = selectedPatchy.animations.Idle;
+    selectedPatchy = null;
+}
+
+function getSelectedPatchy(e) {
+    let selectedPatchy = null;
+    chars.forEach(element => {
+        if (e.x >= element.xpos && e.x <= element.xpos + element.getCurrentFrame().width && e.y >= element.ypos && e.y <= element.ypos + element.getCurrentFrame().height) {
+            selectedPatchy = element;
+            selectedPatchy.dragged = true;
+            selectedPatchy.animation = selectedPatchy.animations.Dragged;
+            selectedPatchy.animationFrame = 0;
+        }
+    });
+    return selectedPatchy;
 }
