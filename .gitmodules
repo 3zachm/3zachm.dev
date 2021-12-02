@@ -4,6 +4,3 @@
 [submodule "osuranks"]
 	path = osuranks
 	url = https://github.com/3zachm/osuranks
-[submodule "MinecraftStats"]
-	path = mcstats
-	url = https://github.com/pdinklag/MinecraftStats

@@ -21,7 +21,7 @@ async function boots_cleanup() {
     await sleep(1000);
     boots_vid = null;
     cleanup = false;
-    $("div.main-header-center").html('<h1 class="main-header-heading" id="four">inabakumori - Rainy Boots</h1>')
+    $("div.main-header-center").html('<h1 class="main-header-heading noselect" id="four">inabakumori - Rainy Boots</h1>')
     $('div.video').fadeIn(400);
     $('div.video').html("");
     $("div.main-header-center").fadeIn(400);
@@ -341,7 +341,7 @@ class Patchouli {
         this.frameTime = 0;
         this.facing = facing;
         this.waitTime = Math.floor(Math.random() * (300 - 40 + 1)) + 40;;
-        this.pause = false;
+        this.paused = false;
         this.dragged = false;
     }
 
@@ -354,7 +354,7 @@ class Patchouli {
         this.frameTime++;
         if (this.frameTime > this.getAnimation().speed) {
             this.frameTime = 0;
-            if (!this.pause) {
+            if (!this.paused) {
                 this.animationFrame++;
             }
             if (this.animationFrame > this.getAnimation().frames.length - 1) {
@@ -369,7 +369,7 @@ class Patchouli {
     }
 
     evalAction() {
-        if (this.ypos != this.ygoal && this.animation != this.animations.Floating && this.pause == false) {
+        if (this.ypos != this.ygoal && this.animation != this.animations.Floating && this.paused == false) {
             this.setFloat();
         }
         else if (this.animation == this.animations.Idle) {
@@ -395,21 +395,21 @@ class Patchouli {
         else if (this.animation == this.animations.Sitting) {
             this.idleTime++;
             if (this.idleTime > this.waitTime) {
-                this.pause = false;
+                this.paused = false;
                 this.setSitUp();
             }
             else if (this.animationFrame == this.getAnimation().frames.length - 2) {
-                this.pause = true;
+                this.paused = true;
             }
         }
         else if (this.animation == this.animations.Falling) {
             this.idleTime++;
             if (this.idleTime > this.waitTime) {
-                this.pause = false;
+                this.paused = false;
                 this.setGettingUp();
             }
             else if (this.animationFrame == this.getAnimation().frames.length - 2) {
-                this.pause = true;
+                this.paused = true;
             }
         }
         else if (this.animation == this.animations.Floating){
@@ -661,7 +661,7 @@ async function onLoad() {
 
 function spawn_patchy() {
     let x = Math.floor(Math.random() * (canvas.width - 100 + 1)) + 100;
-    let y = Math.floor(Math.random() * (canvas.height - 100 + 1)) - 300;
+    let y = Math.floor(Math.random() * (canvas.height - 100 + 1)) - 150;
     let direction = Math.random() < 0.5 ? Direction.Left : Direction.Right;
     let char = new Patchouli(patchySheet, x, y, Animations1.Idle, 0, Animations1, direction, canvas)
     chars.push(char);
@@ -670,28 +670,68 @@ function spawn_patchy() {
 canvas.addEventListener("mousedown",mousedown);
 canvas.addEventListener("mouseup",mouseup);
 canvas.addEventListener("mousemove",mousemove);
+canvas.addEventListener("touchstart",touchstart);
+canvas.addEventListener("touchend",touchend);
+canvas.addEventListener("touchmove",touchmove);
+
+function getMousePos(canvas, evt) {
+    var rect = canvas.getBoundingClientRect();
+    return {
+        x: (evt.clientX - rect.left) / (rect.right - rect.left) * canvas.width,
+        y: (evt.clientY - rect.top) / (rect.bottom - rect.top) * canvas.height
+    };
+}
 
 function mousedown(e) {
-    selectedPatchy = getSelectedPatchy(e);
+    let ev = getMousePos(canvas, e);
+    selectedPatchy = getSelectedPatchy(ev);
     if (selectedPatchy != null) {
         selectedPatchy.offset={
-            x: e.x - selectedPatchy.xpos,
-            y: e.y - selectedPatchy.ypos
+            x: ev.x - selectedPatchy.xpos,
+            y: ev.y - selectedPatchy.ypos
         }
     }
 }
 
 function mousemove(e) {
+    let ev = getMousePos(canvas, e);
     if (selectedPatchy != null) {
-        selectedPatchy.xpos = e.x - selectedPatchy.offset.x;
-        selectedPatchy.ypos = e.y - selectedPatchy.offset.y;
+        selectedPatchy.xpos = ev.x - selectedPatchy.offset.x;
+        selectedPatchy.ypos = ev.y - selectedPatchy.offset.y;
+        selectedPatchy.dragged = true;
+        selectedPatchy.paused = false;
+        selectedPatchy.animation = selectedPatchy.animations.Dragged;
+        selectedPatchy.animationFrame = 0;
     }
 }
 
 function mouseup(e) {
-    selectedPatchy.dragged = false;
-    selectedPatchy.animation = selectedPatchy.animations.Idle;
+    if (selectedPatchy != null) {
+        selectedPatchy.dragged = false;
+        selectedPatchy.animation = selectedPatchy.animations.Idle;
+        enableScroll();
+    }
     selectedPatchy = null;
+}
+
+function touchstart(e) {
+    let ev = {
+        x: e.touches[0].clientX,
+        y: e.touches[0].clientY
+    }
+    mousedown(ev);
+}
+
+function touchmove(e) {
+    let ev = {
+        x: e.touches[0].clientX,
+        y: e.touches[0].clientY
+    }
+    mousemove(ev);
+}
+
+function touchend(e) {
+    mouseup(e);
 }
 
 function getSelectedPatchy(e) {
@@ -699,10 +739,19 @@ function getSelectedPatchy(e) {
     chars.forEach(element => {
         if (e.x >= element.xpos && e.x <= element.xpos + element.getCurrentFrame().width && e.y >= element.ypos && e.y <= element.ypos + element.getCurrentFrame().height) {
             selectedPatchy = element;
-            selectedPatchy.dragged = true;
-            selectedPatchy.animation = selectedPatchy.animations.Dragged;
-            selectedPatchy.animationFrame = 0;
+            disableScroll();
         }
     });
     return selectedPatchy;
 }
+
+function disableScroll() {
+    TopScroll = window.pageYOffset || document.documentElement.scrollTop;
+    LeftScroll = window.pageXOffset || document.documentElement.scrollLeft,
+
+    window.onscroll = function() { window.scrollTo(LeftScroll, TopScroll); };
+}
+
+function enableScroll() {
+    window.onscroll = function() {};
+ }

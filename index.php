@@ -26,7 +26,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
     <script src="js/granim.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css?rainwwwww?">
+    <link rel="stylesheet" type="text/css" href="css/style.css?rainwwwwww?">
     <link rel="preload" href="https://fonts.cdnfonts.com/s/51361/TorusRegular.734ed3ae.woff" as="font" type="font/woff" crossorigin>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope">
 	<link rel="stylesheet" href="http://fonts.cdnfonts.com/css/torus">
@@ -40,19 +40,18 @@
     <header class="main-header" id="main-header" style="display: none;">
         <canvas id="main-gradient"></canvas>
         <div class="video"></div>
-        <canvas width="900" height="500" id="main-bg"></canvas>
-        <canvas id="main-gradient"></canvas>
-        <div class="main-menu">
-            <a href="/" target="_self" class="a-menu" id="logo">3zachm.dev</a>
-            <div class="main-menu-sep"></div>
-            <a href="#section-projects" class="a-menu" id="proj-menu">Projects</a>
-            <a href="#section-social" class="a-menu" id="social-menu">Social</a>
-            <a href="#section-github" class="a-menu" id="github-menu">GitHub</a>
-            <a href="javascript:boots_init();" class="a-menu" id="jerma-menu">Rain?</a>
-            <a href="javascript:spawn_patchy();" class="a-menu" id="patchy-menu">Patchouli</a>
-        </div>
         <div class="main-header-center">
-            <h1 class="main-header-heading" id="four">Hello</h1>
+            <h1 class="main-header-heading noselect" id="four">Hello</h1>
+        </div>
+        <canvas width="900" height="500" id="main-bg"></canvas>
+        <div class="main-menu">
+            <a href="/" target="_self" class="a-menu noselect" id="logo">3zachm.dev</a>
+            <div class="main-menu-sep"></div>
+            <a href="#section-projects" class="a-menu noselect " id="proj-menu">Projects</a>
+            <a href="#section-social" class="a-menu noselect" id="social-menu">Social</a>
+            <a href="#section-github" class="a-menu noselect" id="github-menu">GitHub</a>
+            <a href="javascript:boots_init();" class="a-menu noselect" id="jerma-menu">Rain?</a>
+            <a href="javascript:spawn_patchy();" class="a-menu noselect" id="patchy-menu">Patchouli</a>
         </div>
     </header>
     <section class="section" data-aos="fade-left">
@@ -169,7 +168,7 @@
             </div>
         </div>
     </section>
-    <script src="js/main.js???rainwwwwwwwww?"></script>
+    <script src="js/main.js???wwwrain"></script>
     <script>
         function copySocial(social) {
             event.preventDefault()
