@@ -38,14 +38,14 @@ async function boots() {
     $("div.video").fadeIn(500);
     $("#404").fadeIn(1000);
 
-    $("div.video").html('<video autoplay id="boots-video"><source src="video/boots.webm" volume=0.3 controls="false" type="video/webm"><track label="default" kind="subtitles" srclang="en" src="video/boots.vtt" default></video>');
+    $("div.video").html('<video autoplay id="boots-video"><source src="video/boots.webm" volume=0.1 controls="false" type="video/webm"><track label="default" kind="subtitles" srclang="en" src="video/boots.vtt" default></video>');
     //$("#four").css('background', 'rgba(31, 31, 31, 0.6)')
     $("#four").css('font-size', '48px')
     $("#four").css('color', 'black')
     $("#four").css('font-weight', 'bold')
     $("#four").css('text-shadow', '-1px -1px 0 #b8b4b4, 0 -1px 0 #b8b4b4, 1px -1px 0 #b8b4b4, 1px 0 0 #b8b4b4, 1px 1px 0 #b8b4b4, 0 1px 0 #b8b4b4, -1px 1px 0 #b8b4b4, -1px  0 0 #b8b4b4')
     var a_sheet = document.createElement('style')
-    a_sheet.innerHTML = ".a-menu, .main-menu-sep, #logo, #proj-menu, #social-menu, #github-menu {color: black;} .main-menu-sep {border-left: 1px solid rgb(0, 0, 0)}";
+    a_sheet.innerHTML = ".a-menu, .main-menu-sep, #logo, #proj-menu, #social-menu, #misc-menu {color: black;} .main-menu-sep {border-left: 1px solid rgb(0, 0, 0)}";
     document.body.appendChild(a_sheet);
 
     var video = document.querySelector('#boots-video')
@@ -53,7 +53,7 @@ async function boots() {
         tracks.mode = 'hidden', // must occur before cues is retrieved
         cues = tracks.cues;
 
-    video.volume = 0.3;
+    video.volume = 0.1;
 
     var replaceText = function (text) {
         $('#four').html(text);

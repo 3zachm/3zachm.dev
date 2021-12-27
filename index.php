@@ -41,7 +41,7 @@
         <canvas id="main-gradient"></canvas>
         <div class="video"></div>
         <div class="main-header-center">
-            <h1 class="main-header-heading noselect" id="four">Hello</h1>
+            <h1 class="main-header-heading noselect" id="four">hello</h1>
         </div>
         <canvas width="900" height="500" id="main-bg"></canvas>
         <div class="main-menu">
@@ -49,79 +49,78 @@
             <div class="main-menu-sep"></div>
             <a href="#section-projects" class="a-menu noselect " id="proj-menu">Projects</a>
             <a href="#section-social" class="a-menu noselect" id="social-menu">Social</a>
-            <a href="#section-github" class="a-menu noselect" id="github-menu">GitHub</a>
+            <a href="#section-patchy" class="a-menu noselect" id="misc-menu">Misc</a>
             <a href="javascript:boots_init();" class="a-menu noselect" id="jerma-menu">Rain?</a>
             <a href="javascript:spawn_patchy();" class="a-menu noselect" id="patchy-menu">Patchouli</a>
         </div>
     </header>
-    <section class="section" data-aos="fade-left">
+    <section class="section" data-aos="fade-right">
         <div class="section-container" id="section-projects">
             <h2 class="section-title">Projects</h2>
             <div class="projects-container">
             <div data-aos="fade-right" class="projects">
-                    <div class="projects-column" id="asayake-left">
-                        <div class="column-inner">
-                            <img src="img/asayake2.webp" class="projects-img" alt="asayake example" id="asayake-img">
-                        </div>
-                    </div>
-                    <div class="projects-column" id="asayake-right">
-                        <div class="column-inner">
-                            <h1>asayake</h1>
-                            <p>User-role color bot inspired by Hex (which has gone offline).
-                            Wrriten in node.js, meant for smaller servers as it's role based.</p>
-                            <a href="https://github.com/3zachm/colors-js" id="asayake-source" target="_self"><b>Source Code</b></a></p>
-                            <a href="./asayake/" id="asayake-invite" target="_self"><b>Invite</b></a></p>
-                        </div>
+                <div class="projects-column" id="asayake-left">
+                    <div class="column-inner">
+                        <img src="img/asayake2.webp" class="projects-img" alt="asayake example" id="asayake-img">
                     </div>
                 </div>
-                <div data-aos="fade-left" class="projects">
-                    <div class="projects-column" id="youmu-left">
-                        <div class="column-inner">
-                            <img src="img/youmu2.webp" class="projects-img" alt="youmu example" id="youmu-img">
-                        </div>
-                    </div>
-                    <div class="projects-column" id="youmu-right">
-                        <div class="column-inner">
-                            <h1>youmu</h1>
-                            <p>A recursive timer discord bot, pinging on a set interval for as long as you aren't AFK.
-                                Inspired by Anigame but has other case uses c:</p>
-                            <a href="https://github.com/3zachm/recursive-reminders" id="youmu-source" target="_self"><b>Source Code</b></a></p>
-                            <a href="./youmu/" id="youmu-invite" target="_self"><b>Invite</b></a></p>
-                        </div>
+                <div class="projects-column" id="asayake-right">
+                    <div class="column-inner">
+                        <h1>asayake</h1>
+                        <p>User-role color bot inspired by Hex (which has gone offline).
+                        Wrriten in node.js, meant for smaller servers as it's role based.</p>
+                        <a href="https://github.com/3zachm/colors-js" id="asayake-source" target="_self"><b>Source Code</b></a></p>
+                        <a href="./asayake/" id="asayake-invite" target="_self"><b>Invite</b></a></p>
                     </div>
                 </div>
-                <div data-aos="fade-right" class="projects">
-                    <div class="projects-column" id="stats-left">
-                        <div class="column-inner">
-                            <img src="img/ranks.webp" class="projects-img" alt="osu!raks example" id="ranks-img">
-                        </div>
-                    </div>
-                    <div class="projects-column" id="stats-right">
-                        <div class="column-inner">
-                            <h1>osu!ranks</h1>
-                            <p>Simple tool that displays all API user stats for all 4 gamemodes</p>
-                            <a href="./osuranks/" target="_self"><b>Website</b></a></p>
-                        </div>
+            </div>
+            <div data-aos="fade-right" class="projects">
+                <div class="projects-column" id="youmu-left">
+                    <div class="column-inner">
+                        <img src="img/youmu2.webp" class="projects-img" alt="youmu example" id="youmu-img">
                     </div>
                 </div>
-                <div data-aos="fade-left" class="projects">
-                    <div class="projects-column" id="discord-left">
-                        <div class="column-inner">
-                            <img src="img/discord-preview2.webp" class="projects-img" alt="discord pfp crop example" id="discord-img">
-                        </div>
+                <div class="projects-column" id="youmu-right">
+                    <div class="column-inner">
+                        <h1>youmu</h1>
+                        <p>A recursive timer discord bot, pinging on a set interval for as long as you aren't AFK.
+                            Inspired by Anigame but has other case uses c:</p>
+                        <a href="https://github.com/3zachm/recursive-reminders" id="youmu-source" target="_self"><b>Source Code</b></a></p>
+                        <a href="./youmu/" id="youmu-invite" target="_self"><b>Invite</b></a></p>
                     </div>
-                    <div class="projects-column" id="discord-right">
-                        <div class="column-inner">
-                            <h1>discord previewer</h1>
-                            <p>Another small thing that allows you to crop, export, and preview it in most contexts on discord</p>
-                            <a href="./discord/" target="_self"><b>Website</b></a></p>
-                        </div>
+                </div>
+            </div>
+            <div data-aos="fade-right" class="projects">
+                <div class="projects-column" id="stats-left">
+                    <div class="column-inner">
+                        <img src="img/ranks2.webp" class="projects-img" alt="osu!raks example" id="ranks-img">
+                    </div>
+                </div>
+                <div class="projects-column" id="stats-right">
+                    <div class="column-inner">
+                        <h1>osu!ranks</h1>
+                        <p>Simple tool that displays all API user stats for all 4 gamemodes</p>
+                        <a href="./osuranks/" target="_self"><b>Website</b></a></p>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-right" class="projects">
+                <div class="projects-column" id="discord-left">
+                    <div class="column-inner">
+                        <img src="img/discord-preview2.webp" class="projects-img" alt="discord pfp crop example" id="discord-img">
+                    </div>
+                </div>
+                <div class="projects-column" id="discord-right">
+                    <div class="column-inner">
+                        <h1>discord previewer</h1>
+                        <p>Another small thing that allows you to crop, export, and preview it in most contexts on discord</p>
+                        <a href="./discord/" target="_self"><b>Website</b></a></p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="section">
+    <section class="section" data-aos="fade-right">
         <div class="section-container" id="section-social">
             <h2 class="section-title" id="title-social">Social</h2>
             <div class="social">
@@ -160,7 +159,7 @@
             </div>
         </div>
     </section>
-    <section class="section">
+    <section class="section" data-aos="fade-right">
         <div class="section-container" id="section-github">
             <h2 class="section-title" id="title-github">GitHub</h2>
             <div class="github">
@@ -170,6 +169,8 @@
     </section>
     <section class="section">
         <div class="section-container" id="section-patchy">
+        <h2 class="section-title">o/</h2>
+            <p>might be loud cause I can't control flash volume pls be careful</p>
             <div class="flash-center" id="section-patchy-flash"></div>
             <div class="patchy">
                 <div class="walky-patchy">

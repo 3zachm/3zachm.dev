@@ -185,25 +185,16 @@ a, a:hover, a:visited, a:active {
 }
 
 .projects-column a:hover {
-    color:rgb(170, 170, 170)
+    color:#b875d7;
+    animation: greytopurple .15s ease-in-out;
 }
 
 .projects-img {
     display: block;
     bottom: 0;
-    max-width:100%;
+    width: 80%;
     max-height:100%;
     margin: auto;
-}
-
-#youmu-img {
-    /*max-width: 75%; */
-    max-height: 75%;
-}
-
-#ranks-img {
-    /*max-width:70%; */
-    max-height:70;
 }
 
 .github {
@@ -290,8 +281,8 @@ a, a:hover, a:visited, a:active {
 }
 
 .social-link:hover {
-    color:#ffbfbf;
-    animation: rgbthing 1000ms 0ms infinite linear;
+    color:#b875d7;
+    animation: whitetopurple .15s ease-in-out;
 }
 
 #avatar {
@@ -440,6 +431,24 @@ main-menu p:before {
     }
 }
 
+@keyframes greytopurple {
+    0% {
+        color:#525252
+    }
+    100% {
+        color:#b875d7
+    }
+}
+
+@keyframes whitetopurple {
+    0% {
+        color:#fff
+    }
+    100% {
+        color:#b875d7
+    }
+}
+
 .patchy {
     overflow: hidden;
     /* position: absolute;
@@ -465,4 +474,12 @@ main-menu p:before {
     to {
         margin-left: -256px;
     }
+}
+
+#section-patchy {
+    margin-top: 100vh;
+}
+
+#section-patchy p {
+    text-align: center;
 }
