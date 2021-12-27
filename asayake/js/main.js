@@ -5,7 +5,7 @@ var mainGradient = null;
 async function onLoad() {
     $("#main-header").fadeIn(1000);
     mainGradient = new Granim({
-        element: '#main-bg',
+        element: '#main-gradient',
         direction: 'left-right',
         isPausedWhenNotInView: true,
         stateTransitionSpeed: 200,

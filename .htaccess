@@ -26,3 +26,5 @@ ErrorDocument 404 https://3zachm.dev/error?n=404
 ErrorDocument 414 https://3zachm.dev/error?n=414
 ErrorDocument 500 https://3zachm.dev/error?n=500
 ErrorDocument 504 https://3zachm.dev/error?n=504
+
+AddType application/wasm .wasm

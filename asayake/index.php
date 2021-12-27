@@ -66,7 +66,7 @@
 
 <body>
     <header class="main-header" id="main-header" style="display: none;">
-        <canvas id="main-bg"></canvas>
+        <canvas id="main-gradient"></canvas>
         <div class="video">
         </div>
         <div class="main-menu">
@@ -83,7 +83,7 @@
             <a href="https://discord.com/api/oauth2/authorize?client_id=907538185976946720&permissions=268438528&scope=applications.commands%20bot" target="_self" class="btn invite__btn">Invite</a>
         </div>
     </header>
-    <script src="./js/main.js?rainwwww"></script>
+    <script src="./js/main.js?rainwwwww"></script>
     <script>
         function copySocial(social) {
             event.preventDefault()

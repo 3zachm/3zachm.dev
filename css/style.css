@@ -197,12 +197,12 @@ a, a:hover, a:visited, a:active {
 }
 
 #youmu-img {
-    max-width: 75%;
+    /*max-width: 75%; */
     max-height: 75%;
 }
 
 #ranks-img {
-    max-width:70%;
+    /*max-width:70%; */
     max-height:70;
 }
 
@@ -301,6 +301,14 @@ a, a:hover, a:visited, a:active {
     background-size: cover;
     background-position: top center;
     border-radius: 50%;
+}
+
+.flash-center {
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
 }
 
 body::-webkit-scrollbar {
@@ -425,9 +433,36 @@ main-menu p:before {
 
 @keyframes rgbthing {
     0% {
-      filter: hue-rotate(0deg);
+        filter: hue-rotate(0deg);
     }
     100% {
-      filter: hue-rotate(360deg);
+        filter: hue-rotate(360deg);
     }
-  }
+}
+
+.patchy {
+    overflow: hidden;
+    /* position: absolute;
+    width: 100%; */
+}
+
+.walky-patchy {
+    /* position: absolute; */
+    margin-left: 100%;
+    margin-top: 50px;
+    /* margin-bottom: 50px; */
+    animation: move 20s linear 1s infinite;
+}
+
+#walky-img {
+    width: 128px;
+}
+
+@keyframes move {
+    from {
+        margin-left: 100%;
+    }
+    to {
+        margin-left: -256px;
+    }
+}

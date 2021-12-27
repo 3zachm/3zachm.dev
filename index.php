@@ -26,7 +26,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
     <script src="js/granim.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css?rainwwwwww?">
+    <link rel="stylesheet" type="text/css" href="css/style.css?rainwwwwwwwwww2??">
     <link rel="preload" href="https://fonts.cdnfonts.com/s/51361/TorusRegular.734ed3ae.woff" as="font" type="font/woff" crossorigin>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope">
 	<link rel="stylesheet" href="http://fonts.cdnfonts.com/css/torus">
@@ -162,13 +162,59 @@
     </section>
     <section class="section">
         <div class="section-container" id="section-github">
-            <h2 class="section-title" id="section-github">GitHub</h2>
+            <h2 class="section-title" id="title-github">GitHub</h2>
             <div class="github">
                 <p>I'll hand pick repos later... or maybe auto gen idk</p>
             </div>
         </div>
     </section>
-    <script src="js/main.js???wwwrain"></script>
+    <section class="section">
+        <div class="section-container" id="section-patchy">
+            <div class="flash-center" id="section-patchy-flash"></div>
+            <div class="patchy">
+                <div class="walky-patchy">
+                    <a href="https://www.youtube.com/watch?v=3sOAkdu3tRo" target="_blank"><img src="img/walky.gif" alt="walky" id="walky-img" /></a>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <script src="js/patchy.js?rainwwwwwwwwwwwwwwwwwwwwwwww"></script>
+    <script src="js/main.js????wwwwwrain"></script>
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.RufflePlayer.config = {
+            // Options affecting the whole page
+            "publicPath": undefined,
+            "polyfills": true,
+
+            // Options affecting files only
+            "autoplay": "off",
+            "unmuteOverlay": "visible",
+            "backgroundColor": null,
+            "letterbox": "off",
+            "warnOnUnsupportedContent": true,
+            "contextMenu": true,
+            "showSwfDownload": false,
+            "upgradeToHttps": window.location.protocol === "https:",
+            "maxExecutionDuration": {"secs": 15, "nanos": 0},
+            "logLevel": "error",
+            "base": null,
+            "menu": true,
+            "salign": "",
+            "scale": "showAll",
+            "quality": "high",
+        };
+        window.addEventListener("load", (event) => {
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            const container = document.getElementById("section-patchy-flash");
+            container.appendChild(player);
+            player.load("swf/rhythm heaven new.swf");
+            // player.style.width = "500px";
+        });
+    </script>
+    <script src="wasm/ruffle/ruffle.js"></script>
     <script>
         function copySocial(social) {
             event.preventDefault()

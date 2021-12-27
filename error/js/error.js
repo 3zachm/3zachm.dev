@@ -1,3 +1,5 @@
+document.body.onload = function () { onLoad() };
+
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -107,4 +109,8 @@ async function boots() {
             cleanup = true;
         }
     }
+}
+
+function onLoad() {
+    startPatchy("../img/26550t.png");
 }

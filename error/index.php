@@ -28,24 +28,27 @@
     <meta property="twitter:url" content="https://3zachm.dev/error?n=<?php echo($error) ?>">
     <meta property="twitter:card" content="summary">
 
-    <link rel="stylesheet" href="css/error.css?rain">
+    <link rel="stylesheet" href="css/error.css?wrainw">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope">
 </head>
 <body>
     <header class="main-header" id="main-header">
-        <div class="video">
+        <div class="video"></div>
+        <div class="main-header-center">
+            <p id="four"><?php echo($error) ?></p>
+        </div>
+        <canvas width="900" height="500" id="main-bg"></canvas>
         </div>
         <div class="main-menu">
             <a href="/" target="_self" class="a-menu" id="logo">3zachm.dev</a>
             <div class="main-menu-sep"></div>
             <a href="/" target="_self" class="a-menu" id="home-menu">Home</a>
             <a href="javascript:boots_init();" class="a-menu" id="anny-menu">Rain</a>
-        </div>
-        <div class="main-header-center">
-            <p id="four"><?php echo($error) ?></p>
+            <a href="javascript:spawn_patchy();" class="a-menu noselect" id="patchy-menu">Patchouli</a>
         </div>
     </header>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vtt.js/0.12.1/vtt.min.js" integrity="sha384-al9I19ONGTJ5nA5SlGvEeUl5youezo+vWKHI7u307OomzK/mSVtWphp6wSdSSNSD" crossorigin="anonymous"></script>
-    <script src="js/error.js?rainwww"></script>
+    <script src="../js/patchy.js?rainwwwwwwwwwwwwwwwwwww"></script>
+    <script src="js/error.js?wrainwwwwwwww"></script>
 </body>
