@@ -7,6 +7,7 @@
     }
 ?>
 <!DOCTYPE html>
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/includes/patchy.php'); ?>
 <head>
     <title><?php echo($error) ?> | 3zachm.dev</title>
     <!-- Titles -->
@@ -30,6 +31,10 @@
 
     <link rel="stylesheet" href="css/error.css?wrainw">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope">
+    <?php
+        define('MATOMO_INCLUDED', true);
+        include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/matomo.php');
+    ?>
 </head>
 <body>
     <header class="main-header" id="main-header">
@@ -50,5 +55,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vtt.js/0.12.1/vtt.min.js" integrity="sha384-al9I19ONGTJ5nA5SlGvEeUl5youezo+vWKHI7u307OomzK/mSVtWphp6wSdSSNSD" crossorigin="anonymous"></script>
     <script src="../js/patchy.js?rainwwwwwwwwwwwwwwwwwww"></script>
-    <script src="js/error.js?wrainwwwwwwww"></script>
+    <script src="js/error.js?wrainwwwwwwwww"></script>
 </body>

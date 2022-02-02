@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/includes/patchy.php'); ?>
 <head>
     <title>Asayake Bot | 3zachm.dev</title>
     <!-- Titles -->
@@ -62,6 +62,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
     <link rel="manifest" href="../favicon/site.webmanifest">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <?php
+        define('MATOMO_INCLUDED', true);
+        include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/matomo.php');
+    ?>
 </head>
 
 <body>

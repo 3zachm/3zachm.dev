@@ -91,6 +91,8 @@ async function boots() {
 
     video.addEventListener('loadedmetadata', videoLoaded);
     video.addEventListener('load', playVideo);
+    video.pause();
+    await sleep(1000);
     video.load();
 
     video.ontimeupdate = function () { boots_time(video.currentTime) }

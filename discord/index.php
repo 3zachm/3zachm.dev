@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US" id="main-html" style="font-size: 100%" class="full-motion theme-dark platform-web newBrand" data-rh="lang,style,class">
-
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/includes/patchy.php'); ?>
 <head>
     <meta charset="utf-8">
     <title>Discord Crop Previewer | 3zachm.dev</title>
@@ -12,6 +12,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
     <link rel="manifest" href="../favicon/site.webmanifest">
+    <?php
+        define('MATOMO_INCLUDED', true);
+        include_once($_SERVER['DOCUMENT_ROOT'] . '/includes/matomo.php');
+    ?>
 </head>
 
 </html>

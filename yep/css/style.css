@@ -159,6 +159,7 @@ main-menu p:before {
     display: inline-block;
     position: relative;
     opacity: 1;
+    z-index: 1;
 }
 
 .a-menu:hover {
@@ -207,22 +208,24 @@ main-menu p:before {
   }
 
 .main-header-center {
-    position: relative;
-    top: 50%;
+    z-index: 1;
+    position: absolute;
+    top: 44.5vh;
     left: 0;
-    -webkit-transform: translate(0, -60%);
-        -ms-transform: translate(0, -60%);
-            transform: translate(0, -60%);
+    right: 0;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     margin-top:5vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: rgba(22, 22, 22, 0.5);
+    background: rgba(22, 22, 22, 0.93);
     padding-top:20px;
     padding-bottom:20px;
-    margin-left:5vw;
-    margin-right:5vw;
+    margin-left:7vw;
+    margin-right:7vw;
     /* border-radius: 15px; */
     border: 1px solid rgb(58 58 58);
     min-width: 700px;
@@ -285,6 +288,7 @@ main-menu p:before {
 /*Chat*/
 
 .chat-box {
+    z-index: 0;
     position: absolute;
     width:100vw;
     height:20.7vh;
@@ -293,7 +297,7 @@ main-menu p:before {
     align-items: center;
     justify-content: flex-end;
     flex-direction: column;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .chat-line {
@@ -348,7 +352,7 @@ main-menu p:before {
     align-items: center;
     margin-left: 15vw;
     margin-right: 15vw;
-    margin-bottom: 25vh;
+    margin-bottom: 10px;
 }
 
 #anny-menu {

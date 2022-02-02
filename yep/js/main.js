@@ -86,3 +86,19 @@ async function anny() {
         }
     }
 }
+
+// fade out one div and fade in another
+async function history() {
+    if ($("#div-main").is(":visible")) {
+        $("#div-main").fadeOut(1000);
+        await sleep(1000);
+        $("#div-his").fadeIn(500);
+        $("#toggle-menu").html("Counter");
+    }
+    else {
+        $("#div-his").fadeOut(1000);
+        await sleep(1000);
+        $("#div-main").fadeIn(500);
+        $("#toggle-menu").html("History");
+    }
+}
