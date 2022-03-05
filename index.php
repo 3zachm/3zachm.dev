@@ -27,7 +27,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" integrity="sha384-wziAfh6b/qT+3LrqebF9WeK4+J5sehS6FA10J1t3a866kJ/fvU5UwofWnQyzLtwu" crossorigin="anonymous"></script>
     <script src="js/granim.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css?rainww">
+    <link rel="stylesheet" type="text/css" href="css/style.css?">
     <link rel="preload" href="https://fonts.cdnfonts.com/s/51361/TorusRegular.734ed3ae.woff" as="font" type="font/woff" crossorigin>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope">
 	<link rel="stylesheet" href="http://fonts.cdnfonts.com/css/torus">
@@ -208,6 +208,7 @@
                         <div class="column-inner">
                             <h2>Other Pages</h2>
                             <a href="./misc/frame/" target="_self"><h3>Video Frame Exporter</h3></a>
+                            <a href="./misc/get_emotes.php" target="_self"><h3>Emote Lister</h3></a>
                             <a href="./yep/" target="_self"><h3>YEP Counter</h3></a>
                             <a href="./swf/" target="_self"><h3>SWFs</h3></a>
                         </div>
@@ -232,8 +233,8 @@
             </div>
         </div>
     </section>
-    <script src="js/patchy.js?rainw"></script>
-    <script src="js/main.js?wwwwwwwwwwrain"></script>
+    <script src="js/patchy.js?"></script>
+    <script src="js/main.js?"></script>
     <script>
         window.RufflePlayer = window.RufflePlayer || {};
         window.RufflePlayer.config = {
